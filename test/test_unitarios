@@ -1,0 +1,39 @@
+#!/usr/bin/ruby
+require "lib/Fracciones.rb"
+require 'lib/Matrices_densas.rb'
+require 'lib/Matrices_dispersas.rb'
+require 'test/unit'
+
+class Testeo < Test::Unit::TestCase
+	def setup 
+		@MD1 = MatricesDen.new(2,1,1,1,1)
+		@MD2 = MatricesDen.new(2,2,2,2,2)
+		@MD3 = MatricesDen.new(2,3,3,3,3)
+		@MD4 = MatricesDen.new(2,4,4,4,4)
+		@MD5 = MatricesDen.new(2,-1,-1,-1,-1)
+	end
+
+	def tear_down
+	end
+
+	def test_objeto #Determina si los tipos son correctos
+		assert_instance_of(MatricesDen,@MD1,"No es una MatrizDensa")
+		assert_instance_of(MatricesDen,@MD2,"No es una MatrizDensa")
+	end
+
+	def test_suma #Determina que la suma funciona correctamente
+		assert_equal @MD3, @MD1+@MD2
+	end
+
+	def test_multiplicar #Determina que la multiplicación funciona correctamente
+		assert_equal @MD4, @MD1*@MD2
+	end
+
+	def test_resta #Determina que la resta funciona correctamente
+		assert_equal @MD1, @MD2-@MD1
+	end
+
+	def test_inversa #Determina que la inversa funciona correctamente
+		assert_equal @MD5, -@M1
+	end
+end
