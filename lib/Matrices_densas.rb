@@ -26,7 +26,7 @@ require "Matrices.rb"
 	end
       else 
 	if (other.instance_of? MatricesDis)
-	  for i in 0...@anchos
+	  for i in 0...@ancho
 	    for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]+0
 	    end

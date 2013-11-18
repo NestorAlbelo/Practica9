@@ -37,23 +37,46 @@ class Fracciones
 	end
 		
 	def + (frac)
-		a=(num*frac.denom + frac.num*denom)
-		b=denom*frac.denom
+		a,b=0
+		if (frac == 0)
+		  a=num
+		  b=denom
+		else
+		  a=(num*frac.denom + frac.num*denom)
+		  b=(denom*frac.denom)
+		end  
 		Fracciones.new(a,b)
 	end
 	def - (frac)
-		a=(num*frac.denom - frac.num*denom)
-		b=(denom*frac.denom)
+		a,b=0
+		if (frac == 0)
+		  a=num
+		  b=denom
+		else
+		  a=(num*frac.denom - frac.num*denom)
+		  b=(denom*frac.denom)
+		end  
 		Fracciones.new(a,b)
 	end
 	def * (frac)
-		a=(num*frac.num)
-		b=(denom*frac.denom)
+		a,b=0
+		if (frac == 0)
+		  a=0
+		  b=1
+		else  
+		  a=(num*frac.num)
+		  b=(denom*frac.denom)
+		end
 		Fracciones.new(a,b)
 	end
-	def / (frac)
-		a=(num*frac.denom)
-		b=(denom*frac.num)
+	def \ (frac)
+		a,b=0
+		if (frac == 0)
+		 return -1
+		else  
+		  a=(num*frac.denom)
+		  b=(denom*frac.num)
+		end
 		Fracciones.new(a,b)
 	end
 		
@@ -64,6 +87,10 @@ class Fracciones
 	end
 	def <=>(other)
 		(@numerador/@denominador) <=> (other.num/other.denom)
+	end
+	
+	def coerce(other)
+	  [self,other]
 	end
 		
 			

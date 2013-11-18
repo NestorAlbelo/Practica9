@@ -79,7 +79,7 @@ require "Matrices.rb"
 	for i in 0...@ancho
 	  for j in 0...@ancho
 	    for k in 0...@ancho
-	      resultado[i][j]+=(@matriz[i][k]*other.matriz[k][j])
+	      resultado[i][j]+=@matriz[i][k]*other.matriz[k][j]
 	    end
 	  end
 	end
