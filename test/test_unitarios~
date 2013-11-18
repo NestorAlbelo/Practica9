@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+require "lib/Fracciones.rb"
 require 'lib/Matrices_densas.rb'
 require 'lib/Matrices_dispersas.rb'
 require 'test/unit'

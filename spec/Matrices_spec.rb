@@ -1,6 +1,6 @@
-require "lib/Matrices_densas.rb"
-require "lib/Matrices_dispersas.rb"
-require "lib/Fracciones.rb"
+require "Matrices_densas.rb"
+require "Matrices_dispersas.rb"
+require "Fracciones.rb"
 
 describe Matrices do  
 	before :each do

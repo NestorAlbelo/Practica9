@@ -23,7 +23,7 @@ require "Matrices.rb"
 	  end
 	end
       else 
-	if (other.instance_of? MatricesDis == true)
+	#if (other.instance_of? MatricesDis == true)
 	  for i in 0...@ancho
 	    for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]+0
@@ -35,7 +35,7 @@ require "Matrices.rb"
 	    resultado[i][j]=@matriz[i][j]+other.matriz[l]
 	    l+=2
 	  end
-	end
+	#end
       end
       resultado
     end
@@ -121,4 +121,5 @@ require "Matrices.rb"
       end
     end
     return true
-  end	
+  end
+end	

@@ -15,25 +15,27 @@ require "Matrices.rb"
 	
     end
     def +(other)
-      resultado= MatricesDen.new(@ancho)
+      	resultado= MatricesDen.new(@ancho)
       if (other.instance_of? MatricesDen == true)
 	for i in 0...@ancho
 	  for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]+other.matriz[i][j]
 	  end
 	end
-      else if (other.instance_of? MatricesDis == true)
-	for i in 0...@ancho
-	  for j in 0...@ancho
-	    resultado[i][j]=@matriz[i][j]+0
+      else 
+	#if (other.instance_of? MatricesDis == true)
+	  for i in 0...@ancho
+	    for j in 0...@ancho
+	      resultado[i][j]=@matriz[i][j]+0
+	    end
 	  end
-	end
-	while (l<@ancho)
-	  j=other.matriz[i+1]%other.ancho
-	  i=other.matriz[i+1]/other.ancho
-	  resultado[i][j]=@matriz[i][j]+other.matriz[l]
-	  l+=2
-	end  
+	  while (l<@ancho)
+	    j=other.matriz[i+1]%other.ancho
+	    i=other.matriz[i+1]/other.ancho
+	    resultado[i][j]=@matriz[i][j]+other.matriz[l]
+	    l+=2
+	  end
+	#end
       end
       resultado
     end
@@ -119,4 +121,5 @@ require "Matrices.rb"
       end
     end
     return true
-  end	
+  end
+end	
