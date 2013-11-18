@@ -2,6 +2,7 @@ require "Matrices_densas.rb"
 require "Matrices_dispersas.rb"
 require "Fracciones.rb"
 
+
 describe Matrices do  
 	before :each do
 		@Arr = [10,10,10,10,10,10,10,10,10]
@@ -34,11 +35,11 @@ describe Matrices do
 		end
 
 			it "Sumar modificacion" do
-			(@m1+@m2).should eq(@m3)
+			(@m7+@m8).should eq(@m9)
 		end
 
 			it "Multiplicar modificacion" do
-			(@m1*@m2).should eq(@m5)
+			(@m7*@m8).should eq(@m10)
 		end
 		
 		

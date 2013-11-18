@@ -1,24 +1,6 @@
 require "Matrices.rb"
 
   class MatricesDis < Matrices
-      def initialize(ancho,*elements)
-	  super
-	  @matriz= Array.new(ancho)
-	  while (i < @ancho*3)
-	    @matriz[i]=elements[i]
-	  end
-      end
-      
-      def +(other)
-	resultado= Matrices.new(@ancho*3)
-	while (i < @ancho*3)
-	   k=@matriz[i]
-	   i+=1
-	   j=@matriz[i]
-	   i+=1
-	   resultado[i]=@matriz[i]+other.matriz[k][j]
-	end
-	resultado
-      end
+  end
       
 	

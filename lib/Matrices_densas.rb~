@@ -1,6 +1,7 @@
-require "Matrices.rb"
+require "Matrices.rb" 
 
   class MatricesDen < Matrices
+    
     def initialize(ancho,*elements)
       super
       @matriz= Array.new(ancho)
@@ -14,17 +15,18 @@ require "Matrices.rb"
       end
 	
     end
+    
     def +(other)
       	resultado= MatricesDen.new(@ancho)
-      if (other.instance_of? MatricesDen == true)
+      if (other.instance_of?MatricesDen)
 	for i in 0...@ancho
 	  for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]+other.matriz[i][j]
 	  end
 	end
       else 
-	#if (other.instance_of? MatricesDis == true)
-	  for i in 0...@ancho
+	if (other.instance_of? MatricesDis)
+	  for i in 0...@anchos
 	    for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]+0
 	    end
@@ -35,20 +37,21 @@ require "Matrices.rb"
 	    resultado[i][j]=@matriz[i][j]+other.matriz[l]
 	    l+=2
 	  end
-	#end
+	end
       end
       resultado
     end
+    
     def - (other)
 	resultado= MatricesDen.new(@ancho)
-      if (other.instance_of? MatricesDen == true)
+      if (other.instance_of? MatricesDen)
 	for i in 0...@ancho
 	  for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]-other.matriz[i][j]
 	  end
 	end
       else 
-	if (other.instance_of? MatricesDis == true)
+	if (other.instance_of? MatricesDis)
 	  for i in 0...@ancho
 	    for j in 0...@ancho
 	      resultado[i][j]=@matriz[i][j]-0
@@ -64,6 +67,7 @@ require "Matrices.rb"
       end
       resultado
     end
+   
     def * (other)
       resultado= MatricesDen.new(@ancho)
       for i in 0...@ancho
@@ -71,16 +75,16 @@ require "Matrices.rb"
 	  resultado[i][j]=0
 	end
       end
-      if (other.instance_of? MatricesDen == true)
+      if (other.instance_of? MatricesDen)
 	for i in 0...@ancho
 	  for j in 0...@ancho
 	    for k in 0...@ancho
-	      resultado[i][j]+=@matriz[i][k]*other.matriz[k][j]
+	      resultado[i][j]+=(@matriz[i][k]*other.matriz[k][j])
 	    end
 	  end
 	end
       else
-	if (other.instance_of? MatricesDis == true)
+	if (other.instance_of? MatricesDis)
 	l=0
 	  while (i < @ancho)
 	    while (j < @ancho)
@@ -99,27 +103,51 @@ require "Matrices.rb"
       resultado				
    end
 
-	
-  def -@
-    resultado= Matrices.new(@ancho)
-    for i in 0...@ancho
-      for j in 0...@ancho
-	resultado[i][j]=-@matriz[i][j]
+    def -@
+      resultado= MatricesDen.new(@ancho)
+      for i in 0...@ancho
+	for j in 0...@ancho
+	  resultado[i][j]=-@matriz[i][j]
+	end
       end
+      resultado
     end
-    resultado
-  end
-  def == (other)
-    if (other.instance_of? MatricesDis == true)
-      return false
-    end  
-    for i in 0...@ancho
-      for j in 0...@ancho
-	  if(matriz[i][j]!=other.matriz[i][j])
-	    return false
+  
+    def == (other)
+      if (other.instance_of? MatricesDis)
+	return false
+      end  
+      for i in 0...@ancho
+	for j in 0...@ancho
+	    if(matriz[i][j]!=other.matriz[i][j])
+	      return false
+	    end
+	end
+      end
+      return true
+    end
+    
+
+    def max
+      maxtem=-99999999999999
+      for i in 0...@ancho
+	for j in 0...@ancho
+	  if (@matriz[i][j] > maxtem)
+	    maxtem=@matriz[i][j]
 	  end
+	end
       end
     end
-    return true
-  end
+    
+    def min
+      maxtem=+99999999999999
+      for i in 0...@ancho
+	for j in 0...@ancho
+	  if (@matriz[i][j] < maxtem)
+	    maxtem=@matriz[i][j]
+	  end
+	end
+      end
+    end
+    
 end	

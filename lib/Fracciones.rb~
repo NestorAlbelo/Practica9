@@ -38,7 +38,7 @@ class Fracciones
 		
 	def + (frac)
 		a=(num*frac.denom + frac.num*denom)
-		b=(denom*frac.denom)
+		b=denom*frac.denom
 		Fracciones.new(a,b)
 	end
 	def - (frac)
