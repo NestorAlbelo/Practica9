@@ -69,7 +69,7 @@ class Fracciones
 		end
 		Fracciones.new(a,b)
 	end
-	def \ (frac)
+	def / (frac)
 		a,b=0
 		if (frac == 0)
 		 return -1
@@ -92,7 +92,4 @@ class Fracciones
 	def coerce(other)
 	  [self,other]
 	end
-		
-			
-	
 end

@@ -16,6 +16,7 @@ describe Matrices do
 		@m8=MatricesDen.new(2,Fracciones.new(1,2),Fracciones.new(2,3),Fracciones.new(3,4),Fracciones.new(4,5))
 		@m9=MatricesDen.new(2,Fracciones.new(1,1),Fracciones.new(1,1),Fracciones.new(1,1),Fracciones.new(1,1))
 		@m10=MatricesDen.new(2,Fracciones.new(1,2),Fracciones.new(3,5),Fracciones.new(11,40),Fracciones.new(49,150))
+		@m11=MatricesDen.new(2,0,20,-4,200)
 	end
 	describe "Operaciones de Matrices" do
                 it "Sumar" do
@@ -34,14 +35,21 @@ describe Matrices do
 			(-@m1).should eq(@m6)
 		end
 
-			it "Sumar modificacion" do
+		it "Sumar modificacion" do
 			(@m7+@m8).should eq(@m9)
 		end
 
-			it "Multiplicar modificacion" do
+		it "Multiplicar modificacion" do
 			(@m7*@m8).should eq(@m10)
 		end
 		
+		it "Maximos" do
+			(@m11.max).should eq(200)
+		end
+		
+		it "Minimos" do 
+			(@m11.min).should eq(-4)
+		end
 		
                 
     end

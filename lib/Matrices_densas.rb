@@ -1,4 +1,4 @@
-require "Matrices.rb" 
+require "Matrices.rb"  
 
   class MatricesDen < Matrices
     
@@ -137,17 +137,19 @@ require "Matrices.rb"
 	  end
 	end
       end
+      return maxtem
     end
     
     def min
-      maxtem=+99999999999999
+      mintem=+99999999999999
       for i in 0...@ancho
 	for j in 0...@ancho
-	  if (@matriz[i][j] < maxtem)
-	    maxtem=@matriz[i][j]
+	  if (@matriz[i][j] < mintem)
+	    mintem=@matriz[i][j]
 	  end
 	end
       end
+      return mintem
     end
     
 end	
