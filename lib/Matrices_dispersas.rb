@@ -2,17 +2,21 @@ require "Matrices.rb"
 require "Matrices_densas.rb"
 
 class MatricesDis < Matrices
-  	def initialize(ancho,elementos, posiciones)
+  	def initialize(ancho,elementos=nil, posiciones=nil)
   		super
 		#if (elementos.length < (ancho*ancho*0.4) && elementos.length == posiciones.length) #El numero de elementos no puede se mayor que el 
 					  																		#40% del tamaño y debe coincidir con el numero de posiciones pasadas
-			@ancho = ancho 
+		@ancho = ancho 
+		if elementos ==nil
+			@matriz=nil
+		else
 			@matriz = Array.new
 			j=0
 			for i in 0...elementos.length
 				@matriz << elementos[i]
 				@matriz << posiciones[i]
 			end
+		end
 		#else
 		#	puts "No se puede crear la matriz, parametros incorrectos, intentelo de nuevo"
 		#end
@@ -55,6 +59,15 @@ class MatricesDis < Matrices
 						pos << other.matriz[i]					
 					end
 					i+=2
+				end
+				t=false
+				for i in 0...result.length
+					if result[i]!=0
+						t=true
+					end
+				end
+				if t==false
+					return MatricesDis.new(@ancho)	
 				end
 				return MatricesDis.new(@ancho, result, pos)
 			end
@@ -112,6 +125,15 @@ class MatricesDis < Matrices
 					end
 					i+=2
 				end
+				t=false
+				for i in 0...result.length
+					if result[i]!=0
+						t=true
+					end
+				end
+				if t==false
+					return MatricesDis.new(@ancho)	
+				end
 				return MatricesDis.new(@ancho, result, pos)
 			end
 		##Final de Matrices Dispersas
@@ -133,31 +155,39 @@ class MatricesDis < Matrices
 		if @ancho==other.ancho
 			if (other.instance_of?MatricesDis)
 				resultado=Array.new
+				pos=Array.new
 				for i in 0...@ancho
 	  				for j in 0...@ancho
 	    				for k in 0...@ancho
 	    					t=false
-	    					for l in 1...@matriz.length
+	    					l=1
+	    					while l < @matriz.length
+	    					#for l in 1...@matriz.length
 	    						if matriz[l]==(i*@ancho+k)
-	    							for m in 1...other.matriz.length
+	    							m=1
+	    							while m < other.matriz.length
+	    							#for m in 1...other.matriz.length
 	    								if other.matriz[m]==(k*ancho+j)
 	    									if t==false
 	    										resultado << @matriz[l-1]*other.matriz[m-1]
-	    										resultado << î*ancho+j
+	    										pos << i*ancho+j
 	    										t=true
 	    									else
-	    										resultado[resultado.length-2]+= @matriz[l-1]*other.matriz[m-1]
+	    										resultado[resultado.length-1]+= @matriz[l-1]*other.matriz[m-1]
 	    									end
 	    								end
-    								m+=1
+    								m+=2
     								end
     							end
-    						l+=1
+    						l+=2
     						end
 	    				end
 	  				end
 				end
-				return resultado
+				if resultado.length==0
+					return MatricesDis.new(@ancho)
+				end
+				return MatricesDis.new(@ancho,resultado,pos)
 			else 
 				if (other.instance_of?MatricesDen)
 					m1=Array.new(@ancho*@ancho)
@@ -185,37 +215,47 @@ class MatricesDis < Matrices
 	end	
 
 	def -@
-		resultado = Array.new(@matriz.length)
-		for i in 0...@matriz.length
+		resultado = Array.new
+		pos = Array.new
+		i=0
+		while i < @matriz.length
 			resultado << -@matriz[i]
-			resultado << @matriz[i+1]
-			i+=1
+			pos << @matriz[i+1]
+			i+=2
 		end
-		return resultado
+		return MatricesDis.new(@ancho,resultado,pos)
 	end
 
 	def ==(other)
-		#if other.ancho == @ancho
-		#	if 	@matriz.length == other.matriz.length
+		if @matriz == nil
+			if other.matriz== nil
+				if @ancho == other.ancho
+					return true
+				end
+			end
+			return false
+		else
+			if other.matriz == nil || @ancho!=other.ancho
+				return false
+			else
 				for i in 0...@matriz.length
 					if @matriz[i] != other.matriz[i]
 						return false
 					end
 				end
 				return true
-		#	end
-		#else 
-		#	return false
-		#end
+			end
+		end
 	end
 
 	def max
       	max=@matriz[0]
-      	for i in 0...@matriz.length
+      	i=0
+      	while i < @matriz.length
       		if matriz[i]>max
       			max=matriz[i]
       		end
-      		i+=1
+      		i+=2
       	end
       	if max<0
       		max=0
@@ -225,11 +265,12 @@ class MatricesDis < Matrices
     
     def min
       	min=@matriz[0]
-      	for i in 0...@matriz.length
+      	i=0
+      	while i < @matriz.length
       		if matriz[i]<min
       			min=matriz[i]
       		end
-      		i+=1
+      		i+=2
       	end
       	if min>0
       		min=0

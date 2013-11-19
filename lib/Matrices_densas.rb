@@ -24,16 +24,16 @@ class MatricesDen < Matrices
 	  			end
 			end
      	else 
-			if (other.instance_of? MatricesDis)
+			if (other.instance_of?MatricesDis)
 	  			for i in 0...@ancho
 	    			for j in 0...@ancho
 	      				resultado[i][j]=@matriz[i][j]+0
 	    			end
 	  			end
 	  			l=0
-	  			while (l<@ancho)
-	    			j=other.matriz[i+1].to_i.modulo(other.ancho)
-	    			i=other.matriz[i+1]to.int/other.ancho
+	  			while l<other.matriz.length
+	    			j=other.matriz[l+1]%other.ancho
+	    			i=other.matriz[l+1]/other.ancho
 	    			resultado[i][j]=@matriz[i][j]+other.matriz[l]
 	    			l+=2
 	  			end
@@ -57,9 +57,10 @@ class MatricesDen < Matrices
 	      				resultado[i][j]=@matriz[i][j]-0
 	    			end
 	  			end
+	  			l=0
 	  			while (l<@ancho)
-	    			j=other.matriz[i+1]%other.ancho
-	    			i=other.matriz[i+1]/other.ancho
+	    			j=other.matriz[l+1]%other.ancho
+	    			i=other.matriz[l+1]/other.ancho
 	    			resultado[i][j]=@matriz[i][j]-other.matriz[l]
 	    			l+=2
 	  			end
@@ -85,7 +86,7 @@ class MatricesDen < Matrices
 			end
      	else
 			if (other.instance_of? MatricesDis)
-				l=0
+				l=i=j=k=0
 	  			while (i < @ancho)
 	   				while (j < @ancho)
 	      				while (k < @ancho)
@@ -95,8 +96,11 @@ class MatricesDen < Matrices
 							else
 		  						resultado[i][j]+=@matriz[i][k]*0
 							end #if
+							k+=1
 	      				end #whilek
+	      				j+=1
 	   				end #whilej
+	   				i+=1
 	 			end #whilei
 			end #elseif
       	end #ifexterior
