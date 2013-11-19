@@ -17,21 +17,63 @@ describe Matrices do
 		@m9=MatricesDen.new(2,Fracciones.new(1,1),Fracciones.new(1,1),Fracciones.new(1,1),Fracciones.new(1,1))
 		@m10=MatricesDen.new(2,Fracciones.new(1,2),Fracciones.new(3,5),Fracciones.new(11,40),Fracciones.new(49,150))
 		@m11=MatricesDen.new(2,0,20,-4,200)
+		@m12=MatricesDis.new(2,[1],[0])
+		@m13=MatricesDis.new()
+		@m14=MatricesDis.new()
+		@m15=MatricesDis.new()
+		@m16=MatricesDis.new()
+		@m17=MatricesDis.new()
+		@m18=MatricesDis.new()
+		@m19=MatricesDis.new()
+		@m20=MatricesDis.new()
 	end
-	describe "Operaciones de Matrices" do
-                it "Sumar" do
+	describe "Operaciones de Matrices Densas" do
+        it "Sumar" do
 			(@m1+@m2).should eq(@m3)
 		end	
 
-                it "Restar" do
+        it "Restar" do
 			(@m1-@m2).should eq(@m4)
 		end
 
-                it "Multiplicar" do
+        it "Multiplicar" do
 			(@m1*@m2).should eq(@m5)
 		end
 
-        	it "Opuesto" do
+        it "Opuesto" do
+			(-@m1).should eq(@m6)
+		end
+
+		it "Sumar modificacion" do
+			(@m7+@m8).should eq(@m9)
+		end
+
+		it "Multiplicar modificacion" do
+			(@m7*@m8).should eq(@m10)
+		end
+		
+		it "Maximos" do
+			(@m11.max).should eq(200)
+		end
+		
+		it "Minimos" do 
+			(@m11.min).should eq(-4)
+		end        
+    end
+    describe "Operaciones Matrices Dispersas"
+    	it "Sumar" do
+			(@m1+@m2).should eq(@m3)
+		end	
+
+        it "Restar" do
+			(@m1-@m2).should eq(@m4)
+		end
+
+        it "Multiplicar" do
+			(@m1*@m2).should eq(@m5)
+		end
+
+        it "Opuesto" do
 			(-@m1).should eq(@m6)
 		end
 
@@ -50,7 +92,5 @@ describe Matrices do
 		it "Minimos" do 
 			(@m11.min).should eq(-4)
 		end
-		
-                
-    end
+	end
 end

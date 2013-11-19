@@ -4,62 +4,61 @@ require "Matrices_densas.rb"
 class MatricesDis < Matrices
   	def initialize(ancho,elementos, posiciones)
   		super
-		if (elementos.length < (ancho*ancho*0.4).to_int && elementos.length == posiciones.length) #El numero de elementos no puede se mayor que el 
-																								  #40% del tamaño y debe coincidir con el numero de posiciones pasadas
+		#if (elementos.length < (ancho*ancho*0.4) && elementos.length == posiciones.length) #El numero de elementos no puede se mayor que el 
+					  																		#40% del tamaño y debe coincidir con el numero de posiciones pasadas
 			@ancho = ancho 
-			@matriz = Array.new(elementos.length*2)
-			i=0
+			@matriz = Array.new
 			j=0
-			while i <= elementos.length*2 do
-				@matriz[i]=elementos[j]
-				@matriz[i+1]=posiciones[j]
-				i+=2
-				j+=1
+			for i in 0...elementos.length
+				@matriz << elementos[i]
+				@matriz << posiciones[i]
 			end
-		else
-			puts "No se puede crear la matriz, parametros incorrectos, intentelo de nuevo"
-		end
+		#else
+		#	puts "No se puede crear la matriz, parametros incorrectos, intentelo de nuevo"
+		#end
 	end
 	def +(other)
 		if (other.instance_of?MatricesDis)
-			if @ancho == other.ancho
-				i=j=1
-				result = Array.new
-				while i < @matriz.length/2
-					t=false
-					while j < other.matriz.length/2
-						if @matriz[i] == other.matriz[j]
+			if @ancho == other.ancho #Compruebo el ancho de las matrices
+				result = Array.new #Vector para guardar los valores
+				pos = Array.new #Vector para guardar los resultados
+				i=1
+				while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
+					t=false # Permite comprobar si el elemento i de matriz se ha introducido o no
+					j=1
+					while j < other.matriz.length #Recorre el vector de other.matriz unicamente por las posiciones
+						if @matriz[i] == other.matriz[j] #Si las posiciones coinciden las suma
 							result << (@matriz[i-1]+other.matriz[j-1])
-							result << @matriz[i]
-							t=true
+							pos << @matriz[i]
+							t=true #Significa que la posicion i de matriz ya esta introducida en result
 						end
 						j+=2
+					end
+					if t==false # Si no se ha operado la posicion i de matriz se introduce tal cual
+						result << @matriz[i-1]
+						pos << @matriz[i]
+					end
+					i+=2
+				end
+
+				i=1
+
+				while i < other.matriz.length #Recorre el vector other.matriz por las posiciones
+					t=false # Indica si el elemento ya esta en result
+					for j in 0..pos.length
+						if other.matriz[i]==pos[j]
+							t=true
+						end
 					end
 					if t==false
-						result << @matriz[i-1]
-						result << @matriz[i]
-					end
-					i+=2
-				end
-
-				i=j=1
-				while i < other.matriz.length/2
-					t=false
-					while j < result.length/2
-						if other.matriz[i]==result[j]
-							t=true
-						end
-						j+=2
-					end
-					if t=false
 						result << other.matriz[i-1]
-						result << other.matriz[i]
+						pos << other.matriz[i]					
 					end
 					i+=2
 				end
-				return result
+				return MatricesDis.new(@ancho, result, pos)
 			end
-
+		##Final de Matrices Dispersas
 		else 
 			if (other.instance_of?MatricesDen)
 				m1=Array.new(other.ancho*other.ancho)
@@ -76,43 +75,46 @@ class MatricesDis < Matrices
 
 	def -(other)
 		if (other.instance_of?MatricesDis)
-			if @ancho == other.ancho
-				i=j=1
-				result = Array.new
-				while i < @matriz.length
-					t=false
-					while j < other.matriz.length
-						if @matriz[i] == other.matriz[j]
+			if @ancho == other.ancho #Compruebo el ancho de las matrices
+				result = Array.new #Vector para guardar los valores
+				pos = Array.new #Vector para guardar los resultados
+				i=1
+				while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
+					t=false # Permite comprobar si el elemento i de matriz se ha introducido o no
+					j=1
+					while j < other.matriz.length #Recorre el vector de other.matriz unicamente por las posiciones
+						if @matriz[i] == other.matriz[j] #Si las posiciones coinciden las suma
 							result << (@matriz[i-1]-other.matriz[j-1])
-							result << @matriz[i]
-							t=true
+							pos << @matriz[i]
+							t=true #Significa que la posicion i de matriz ya esta introducida en result
 						end
 						j+=2
 					end
-					if t==false
+					if t==false # Si no se ha operado la posicion i de matriz se introduce tal cual
 						result << @matriz[i-1]
-						result << @matriz[i]
+						pos << @matriz[i]
 					end
 					i+=2
 				end
 
-				i=j=1
-				while i < other.matriz.length
-					t=false
-					while j < result.length
-						if other.matriz[i]==result[j]
+				i=1
+
+				while i < other.matriz.length #Recorre el vector other.matriz por las posiciones
+					t=false # Indica si el elemento ya esta en result
+					for j in 0..pos.length
+						if other.matriz[i]==pos[j]
 							t=true
 						end
-						j+=2
 					end
-					if t=false
+					if t==false
 						result << -other.matriz[i-1]
-						result << -other.matriz[i]
+						pos << other.matriz[i]					
 					end
 					i+=2
 				end
-				return result
+				return MatricesDis.new(@ancho, result, pos)
 			end
+		##Final de Matrices Dispersas
 		else 
 			if (other.instance_of?MatricesDen)
 				m1=Array.new(other.ancho*other.ancho)
@@ -193,16 +195,18 @@ class MatricesDis < Matrices
 	end
 
 	def ==(other)
-		if other.ancho == @ancho && @matriz.length == other.matriz.length
-			for i in 0...@matriz.length
-				if @matriz[i] != other.matriz[i]
-					return false
+		#if other.ancho == @ancho
+		#	if 	@matriz.length == other.matriz.length
+				for i in 0...@matriz.length
+					if @matriz[i] != other.matriz[i]
+						return false
+					end
 				end
-			end
-			return true
-		else 
-			return false
-		end
+				return true
+		#	end
+		#else 
+		#	return false
+		#end
 	end
 
 	def max

@@ -30,9 +30,10 @@ class MatricesDen < Matrices
 	      				resultado[i][j]=@matriz[i][j]+0
 	    			end
 	  			end
+	  			l=0
 	  			while (l<@ancho)
-	    			j=other.matriz[i+1]%other.ancho
-	    			i=other.matriz[i+1]/other.ancho
+	    			j=other.matriz[i+1].to_i.modulo(other.ancho)
+	    			i=other.matriz[i+1]to.int/other.ancho
 	    			resultado[i][j]=@matriz[i][j]+other.matriz[l]
 	    			l+=2
 	  			end
