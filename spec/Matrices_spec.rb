@@ -18,14 +18,21 @@ describe Matrices do
 		@m10=MatricesDen.new(2,Fracciones.new(1,2),Fracciones.new(3,5),Fracciones.new(11,40),Fracciones.new(49,150))
 		@m11=MatricesDen.new(2,0,20,-4,200)
 		@m12=MatricesDis.new(2,[1],[0])
-		@m13=MatricesDis.new()
-		@m14=MatricesDis.new()
-		@m15=MatricesDis.new()
-		@m16=MatricesDis.new()
-		@m17=MatricesDis.new()
-		@m18=MatricesDis.new()
-		@m19=MatricesDis.new()
-		@m20=MatricesDis.new()
+		@m13=MatricesDis.new(2,[3],[0])
+		@m14=MatricesDis.new(2,[4],[0])
+		@m15=MatricesDis.new(2,[-2],[0])
+		@m16=MatricesDis.new(2,[-1],[0])
+		@m17=MatricesDis.new(2,[Fracciones.new(1,2)],[0])
+		@m18=MatricesDis.new(2,[Fracciones.new(1,2)],[0])
+		@m19=MatricesDis.new(2,[Fracciones.new(1,1)],[0])
+		@m20=MatricesDis.new(2,[Fracciones.new(1,4)],[0])
+		@m22=MatricesDen.new(2,6,0,6,0)
+		@m23=MatricesDen.new(2,-1,2,2,2)
+		@m24=MatricesDen.new(2,5,2,2,2)
+		@m25=MatricesDis.new(2,[6,6],[0,2])
+		@m26=MatricesDis.new(2,[-1,2,2,2],[0,1,2,3])
+		@m25=MatricesDis.new(2,[5,2,2,2],[0,1,2,3])
+		
 	end
 	describe "Operaciones de Matrices Densas" do
         it "Sumar" do
@@ -60,37 +67,64 @@ describe Matrices do
 			(@m11.min).should eq(-4)
 		end        
     end
-    describe "Operaciones Matrices Dispersas"
+
+    describe "Operaciones Matrices Dispersas" do
     	it "Sumar" do
-			(@m1+@m2).should eq(@m3)
+			(@m12+@m13).should eq(@m14)
 		end	
 
         it "Restar" do
-			(@m1-@m2).should eq(@m4)
+			(@m12-@m13).should eq(@m15)
 		end
 
         it "Multiplicar" do
-			(@m1*@m2).should eq(@m5)
+			(@m12*@m13).should eq(@m13)
 		end
 
         it "Opuesto" do
-			(-@m1).should eq(@m6)
-		end
-
-		it "Sumar modificacion" do
-			(@m7+@m8).should eq(@m9)
-		end
-
-		it "Multiplicar modificacion" do
-			(@m7*@m8).should eq(@m10)
-		end
-		
-		it "Maximos" do
-			(@m11.max).should eq(200)
-		end
-		
-		it "Minimos" do 
-			(@m11.min).should eq(-4)
-		end
+			(-@m12).should eq(@m16)
 	end
+
+	it "Sumar modificacion" do
+			(@m17+@m18).should eq(@m19)
+	end
+
+	it "Multiplicar modificacion" do
+			(@m17*@m18).should eq(@m20)
+	end
+		
+	it "Maximos" do
+			(@m14.max).should eq(4)
+	end
+		
+	it "Minimos" do 
+			(@m14.min).should eq(0)
+	end
+    end
+
+    describe "Operaciones Matrices Dispersas y Densas" do
+    	it "MultiplicarDensa-Dis" do
+			(@m2*@m13).should eq(@m22)
+		end
+	it "RestarDensa-Dis" do
+			(@m2-@m13).should eq(@m23)
+		end
+
+        it "MultiplicarDensa-Dis" do
+			(@m2+@m13).should eq(@m24)
+		end
+
+	it "MultiplicarDis-Den" do
+			(@m13*@m2).should eq(@m22)
+		end
+	it "RestarDensa-Dis-Den" do
+			(@m13-@m2).should eq(@m23)
+		end
+
+        it "MultiplicarDis-Den" do
+			(@m13+@m2).should eq(@m24)
+		end
+
+       
+    end	
 end

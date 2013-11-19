@@ -14,8 +14,6 @@ m6=MatricesDen.new(2,8,4,4,4)
 
 m10=m1*m2
 
-puts m10.matriz
-
 if m10==multi
 	puts "Toma"
 end

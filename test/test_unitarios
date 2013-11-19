@@ -11,6 +11,11 @@ class Testeo < Test::Unit::TestCase
 		@MD3 = MatricesDen.new(2,3,3,3,3)
 		@MD4 = MatricesDen.new(2,4,4,4,4)
 		@MD5 = MatricesDen.new(2,-1,-1,-1,-1)
+		@m12=MatricesDis.new(2,[1],[0])
+		@m13=MatricesDis.new(2,[3],[0])
+		@m14=MatricesDis.new(2,[4],[0])
+		@m15=MatricesDis.new(2,[-2],[0])
+		@m16=MatricesDis.new(2,[-1],[0])
 	end
 
 	def tear_down
@@ -19,18 +24,26 @@ class Testeo < Test::Unit::TestCase
 	def test_objeto #Determina si los tipos son correctos
 		assert_instance_of(MatricesDen,@MD1,"No es una MatrizDensa")
 		assert_instance_of(MatricesDen,@MD2,"No es una MatrizDensa")
+		assert_instance_of(MatricesDis,@m12,"No es una MatrizDispersa")
+		assert_instance_of(MatricesDis,@m13,"No es una MatrizDispersa")
+		assert_instance_of(MatricesDis,@m14,"No es una MatrizDispersa")
+		assert_instance_of(MatricesDis,@m15,"No es una MatrizDispersa")
+		assert_instance_of(MatricesDis,@m16,"No es una MatrizDispersa")
 	end
 
 	def test_suma #Determina que la suma funciona correctamente
 		assert_equal @MD3, @MD1+@MD2
+		assert_equal @m14, @m12+@m13 
 	end
 
 	def test_multiplicar #Determina que la multiplicación funciona correctamente
 		assert_equal @MD4, @MD1*@MD2
+		assert_equal @m13, @m12*@m13
 	end
 
 	def test_resta #Determina que la resta funciona correctamente
 		assert_equal @MD1, @MD2-@MD1
+		assert_equal @m15, @m12-@m13
 	end
 
 	def test_inversa #Determina que la inversa funciona correctamente

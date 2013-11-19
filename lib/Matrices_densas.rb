@@ -20,7 +20,7 @@ class MatricesDen < Matrices
       	if (other.instance_of?MatricesDen)
 			for i in 0...@ancho
 	  			for j in 0...@ancho
-	      			resultado[i][j]=@matriz[i][j]+other.matriz[i][j]
+	      			resultado.matriz[i][j]=@matriz[i][j]+other.matriz[i][j]
 	  			end
 			end
      	else 
@@ -47,21 +47,21 @@ class MatricesDen < Matrices
       	if (other.instance_of? MatricesDen)
 			for i in 0...@ancho
 	  			for j in 0...@ancho
-	      			resultado[i][j]=@matriz[i][j]-other.matriz[i][j]
+	      			resultado.matriz[i][j]=@matriz[i][j]-other.matriz[i][j]
 	  			end
 			end
       	else 
 			if (other.instance_of? MatricesDis)
 	  			for i in 0...@ancho
 	    			for j in 0...@ancho
-	      				resultado[i][j]=@matriz[i][j]-0
+	      				resultado.matriz[i][j]=@matriz[i][j]-0
 	    			end
 	  			end
 	  			l=0
-	  			while (l<@ancho)
+	  			while (l<other.matriz.length)
 	    			j=other.matriz[l+1]%other.ancho
 	    			i=other.matriz[l+1]/other.ancho
-	    			resultado[i][j]=@matriz[i][j]-other.matriz[l]
+	    			resultado.matriz[i][j]=@matriz[i][j]-other.matriz[l]
 	    			l+=2
 	  			end
 			end
@@ -73,32 +73,36 @@ class MatricesDen < Matrices
       	resultado= MatricesDen.new(@ancho)
       	for i in 0...@ancho
 			for j in 0...@ancho
-	 			resultado[i][j]=0
+	 			resultado.matriz[i][j]=0
 			end
       	end
       	if (other.instance_of? MatricesDen)
 			for i in 0...@ancho
 	  			for j in 0...@ancho
 	    			for k in 0...@ancho
-	      				resultado[i][j]+=@matriz[i][k]*other.matriz[k][j]
+	      				resultado.matriz[i][j]+=@matriz[i][k]*other.matriz[k][j]
 	    			end
 	  			end
 			end
      	else
-			if (other.instance_of? MatricesDis)
-				l=i=j=k=0
+			if (other.instance_of? MatricesDis)				
+				i=j=k=0
 	  			while (i < @ancho)
+					j=0
 	   				while (j < @ancho)
-	      				while (k < @ancho)
-							if (((other.matriz[l+1]%other.ancho)==k) && ((other.matriz[l+1]/other.ancho)==j))
-		  						resultado[i][j]+=@matriz[i][k]*other.matriz[l]
-		  						l+=2
-							else
-		  						resultado[i][j]+=@matriz[i][k]*0
-							end #if
+						k=0	      					
+						while (k < @ancho)
+							l=0
+							while (l<other.matriz.length)
+								if (((other.matriz[l+1]%other.ancho)==j) && ((other.matriz[l+1]/  other.ancho)==k))
+		  							resultado.matriz[i][j]+=@matriz[i][k]*other.matriz[l]
+							
+								end #if
+								l+=2
+							end
 							k+=1
-	      				end #whilek
-	      				j+=1
+	      					end #whilek
+	      					j+=1
 	   				end #whilej
 	   				i+=1
 	 			end #whilei
@@ -111,7 +115,7 @@ class MatricesDen < Matrices
       	resultado= MatricesDen.new(@ancho)
       	for i in 0...@ancho
 			for j in 0...@ancho
-	  			resultado[i][j]=-@matriz[i][j]
+	  			resultado.matriz[i][j]=-@matriz[i][j]
 			end
       	end
       	resultado
