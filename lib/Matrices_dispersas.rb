@@ -4,8 +4,7 @@ require "Matrices_densas.rb"
 class MatricesDis < Matrices
   	def initialize(ancho,elementos=nil, posiciones=nil)
   		super
-		#if (elementos.length < (ancho*ancho*0.4) && elementos.length == posiciones.length) #El numero de elementos no puede se mayor que el 
-					  																		#40% del tamaño y debe coincidir con el numero de posiciones pasadas
+		#if (elementos.length < (ancho*ancho*0.4) && elementos.length == posiciones.length) #El numero de elementos no puede se mayor que el #40% del tamaño y debe coincidir con el numero de posiciones pasadas
 		@ancho = ancho 
 		if elementos ==nil
 			@matriz=nil
@@ -21,13 +20,14 @@ class MatricesDis < Matrices
 		#	puts "No se puede crear la matriz, parametros incorrectos, intentelo de nuevo"
 		#end
 	end
+
 	def +(other)
 		if (other.instance_of?MatricesDis)
 			if @ancho == other.ancho #Compruebo el ancho de las matrices
 				result = Array.new #Vector para guardar los valores
 				pos = Array.new #Vector para guardar los resultados
 				i=1
-				while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
+			while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
 					t=false # Permite comprobar si el elemento i de matriz se ha introducido o no
 					j=1
 					while j < other.matriz.length #Recorre el vector de other.matriz unicamente por las posiciones
@@ -74,25 +74,31 @@ class MatricesDis < Matrices
 		##Final de Matrices Dispersas
 		else 
 			if (other.instance_of?MatricesDen)
-				m1=Array.new(other.ancho*other.ancho)
-				for i in 0...other.ancho
-					for j in 0...other.ancho
-						m1[i*other.ancho+j]=other.matriz[i][j]
-					end
-				end
-				m2=MatricesDen.new(other.ancho, m1)
-				return m2+self
+				resultado= MatricesDen.new(@ancho)
+				for i in 0...@ancho
+				  for j in 0...@ancho
+	      				resultado.matriz[i][j]=other.matriz[i][j]
+				  end
+	  			end
+	  			l=0
+	  			while l<@matriz.length
+				  j=@matriz[l+1]%other.ancho
+				  i=@matriz[l+1]/other.ancho
+				  resultado[i][j]=@matriz[l]+other.matriz[i][j]
+				  l+=2
+	  			end
+				return resultado
 			end
 		end
 	end
 
-	def -(other)
-		if (other.instance_of?MatricesDis)
+		def -(other)
+			if (other.instance_of?MatricesDis)
 			if @ancho == other.ancho #Compruebo el ancho de las matrices
 				result = Array.new #Vector para guardar los valores
 				pos = Array.new #Vector para guardar los resultados
 				i=1
-				while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
+			while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
 					t=false # Permite comprobar si el elemento i de matriz se ha introducido o no
 					j=1
 					while j < other.matriz.length #Recorre el vector de other.matriz unicamente por las posiciones
@@ -120,7 +126,7 @@ class MatricesDis < Matrices
 						end
 					end
 					if t==false
-						result << -other.matriz[i-1]
+						result << other.matriz[i-1]
 						pos << other.matriz[i]					
 					end
 					i+=2
@@ -139,14 +145,20 @@ class MatricesDis < Matrices
 		##Final de Matrices Dispersas
 		else 
 			if (other.instance_of?MatricesDen)
-				m1=Array.new(other.ancho*other.ancho)
-				for i in 0...other.ancho
-					for j in 0...other.ancho
-						m1[i*other.ancho+j]=other.matriz[i][j]
-					end
-				end
-				m2=MatricesDen.new(other.ancho, m1)
-				return m2-self
+				resultado= MatricesDen.new(@ancho)
+				for i in 0...@ancho
+				  for j in 0...@ancho
+	      				resultado.matriz[i][j]=other.matriz[i][j]
+				  end
+	  			end
+	  			l=0
+	  			while (l< @matriz.length)
+				  j=@matriz[l+1]%other.ancho
+				  i=@matriz[l+1]/other.ancho
+				  resultado[i][j]=@matriz[l]-other.matriz[i][j]
+				  l+=2
+	  			end
+				return resultado
 			end
 		end
 	end
@@ -190,25 +202,33 @@ class MatricesDis < Matrices
 				return MatricesDis.new(@ancho,resultado,pos)
 			else 
 				if (other.instance_of?MatricesDen)
-					m1=Array.new(@ancho*@ancho)
+					resultado= MatricesDen.new(@ancho)
 					for i in 0...@ancho
-						for j in 0...@ancho
-							t=false
-							for k in 1...@matriz.length
-								if matriz[k]==(i*ancho+j)
-									m1[i*ancho+j]=matriz[k-1]
-									t=true
-								else
-									if t==false
-										m1[i*ancho+j]=0
-									end
-								end
-								k+=1
-							end
-						end
+					  for j in 0...@ancho
+					      resultado.matriz[i][j]=0
+					  end
 					end
-					m2=MatricesDen.new(@ancho, m1)
-					return m2*other
+					
+					i=j=k=0
+					while (i < @ancho)
+					    j=0
+					    while (j < @ancho)
+						k=0	      					
+						while (k < @ancho)
+						    l=0
+						    while (l<@matriz.length)
+						      if (((@matriz[l+1]%@ancho)==j) && ((@matriz[l+1]/@ancho)==k))
+		  					resultado.matriz[i][j]+=other.matriz[i][k]*@matriz[l]
+						      end #if
+						      l+=2
+						    end #whilel
+							k+=1
+	      					end #whilek
+	      					j+=1
+					    end #whilej
+					    i+=1
+					end #whilei
+					resultado 
 				end	
 			end	
 		end

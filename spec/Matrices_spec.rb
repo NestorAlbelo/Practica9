@@ -110,21 +110,18 @@ describe Matrices do
 			(@m2-@m13).should eq(@m23)
 		end
 
-        it "MultiplicarDensa-Dis" do
+        it "SumarDensa-Dis" do
 			(@m2+@m13).should eq(@m24)
 		end
 
 	it "MultiplicarDis-Den" do
 			(@m13*@m2).should eq(@m22)
 		end
-	it "RestarDensa-Dis-Den" do
-			(@m13-@m2).should eq(@m23)
-		end
+	
 
-        it "MultiplicarDis-Den" do
+        it "SumaDis-Den" do
 			(@m13+@m2).should eq(@m24)
 		end
-
-       
+	
     end	
 end

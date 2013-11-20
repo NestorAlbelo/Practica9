@@ -102,13 +102,13 @@ class MatricesDen < Matrices
 							end
 							k+=1
 	      					end #whilek
-	      				j+=1
+	      					j+=1
 	   				end #whilej
 	   				i+=1
 	 			end #whilei
 			end #elseif
       	end #ifexterior
-      	resultado				
+      	 resultado				
    	end
 
     def -@

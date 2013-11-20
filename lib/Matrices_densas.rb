@@ -108,7 +108,7 @@ class MatricesDen < Matrices
 	 			end #whilei
 			end #elseif
       	end #ifexterior
-      	resultado				
+      	 resultado				
    	end
 
     def -@
