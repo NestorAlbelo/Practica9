@@ -5,11 +5,11 @@ require 'practica9/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "practica9"
-  spec.version       = Practica9::VERSION
+  spec.version       = Practica9::1
   spec.authors       = ["Alejandro Hernández and Nestor"]
   spec.email         = ["quirio123@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Matrices Densas Y Dispersas}
+  spec.summary       = %q{Matrices Densas Y Dispersas}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "guard-bundler"
 end
