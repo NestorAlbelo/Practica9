@@ -1,59 +1,58 @@
 require "Matrices.rb"
 require "Matrices_densas.rb"
 
+# = Clase Martriz dispersa.
+#  En las matrices dispersas,el número de elementos no puede se mayor que el #40% del tamaño de la matriz.
+#  Su finalidad es la representación y correcto almacenamiento de una matriz dispersa. Además de posibilitar las operaciones básicas como son:
+# - Suma.
+# - Resta.
+# - Multiplicación.
+# - Comparación de igualdad.
+# - Opuesto.
+# - Valor mínimo.
+# - Valor máximo.
+# Además se permite realizar operaciones con matrices densas.
+
 class MatricesDis < Matrices
   	def initialize(ancho,elementos=nil, posiciones=nil)
   		super
-		#if (elementos.length < (ancho*ancho*0.4) && elementos.length == posiciones.length) #El numero de elementos no puede se mayor que el #40% del tamaño y debe coincidir con el numero de posiciones pasadas
 		@ancho = ancho 
 		if elementos ==nil
 			@matriz=nil
 		else
 			@matriz = Array.new
 			j=0
-			#for i in 0...elementos.length
 			elementos.length.times do |i|
 				@matriz << elementos[i]
 				@matriz << posiciones[i]
 			end
 		end
-		#else
-		#	puts "No se puede crear la matriz, parametros incorrectos, intentelo de nuevo"
-		#end
 	end
 
 	def +(other)
 		if (other.instance_of?MatricesDis)
-			if @ancho == other.ancho #Compruebo el ancho de las matrices
-				result = Array.new #Vector para guardar los valores
-				pos = Array.new #Vector para guardar los resultados
-				#i=1
-				#while i < @matriz.length     # Recorre el vector de matriz visitando unicamente las posiciones no los valores
+			if @ancho == other.ancho 
+				result = Array.new 
+				pos = Array.new 
 				0.upto(@matriz.length/2-1) do |x|
 					i=x*2+1
-					t=false # Permite comprobar si el elemento i de matriz se ha introducido o no
-					#j=1
-					#while j < other.matriz.length #Recorre el vector de other.matriz unicamente por las posiciones
 					0.upto(other.matriz.length/2-1) do |y|
 					    j=y*2+1  
-						if @matriz[i] == other.matriz[j] #Si las posiciones coinciden las suma
+						if @matriz[i] == other.matriz[j] 
 							result << (@matriz[i-1]+other.matriz[j-1])
 							pos << @matriz[i]
-							t=true #Significa que la posicion i de matriz ya esta introducida en result
+							t=true 
 						end
 					end
-					if t==false # Si no se ha operado la posicion i de matriz se introduce tal cual
+					if t==false 
 						result << @matriz[i-1]
 						pos << @matriz[i]
 					end
 				end
 
-				#i=1
-				#while i < other.matriz.length #Recorre el vector other.matriz por las posiciones
 				0.upto(other.matriz.length/2-1) do |x|
 					i=x*2+1
-					t=false # Indica si el elemento ya esta en result
-					#for j in 0..pos.length
+					t=false 
 					pos.length.times do |j|
 						if other.matriz[i]==pos[j]
 							t=true
@@ -65,7 +64,6 @@ class MatricesDis < Matrices
 					end
 				end
 				t=false
-				#for i in 0...result.length
 				result.length.times do |i|
 					if result[i]!=0
 						t=true
@@ -76,7 +74,7 @@ class MatricesDis < Matrices
 				end
 				return MatricesDis.new(@ancho, result, pos)
 			end
-		##Final de Matrices Dispersas
+		
 		else 
 			if (other.instance_of?MatricesDen)
 				resultado= MatricesDen.new(@ancho)
@@ -85,8 +83,7 @@ class MatricesDis < Matrices
 	      				resultado.matriz[i][j]=other.matriz[i][j]
 				  end
 	  			end
-	  			#while l<@matriz.length
-				0.upto(@matriz.length/2-1) do |x|
+	  			0.upto(@matriz.length/2-1) do |x|
 				  l=x*2+1
 				  j=@matriz[l+1]%other.ancho
 				  i=@matriz[l+1]/other.ancho
@@ -99,35 +96,30 @@ class MatricesDis < Matrices
 
 		def -(other)
 			if (other.instance_of?MatricesDis)
-			if @ancho == other.ancho #Compruebo el ancho de las matrices
-				result = Array.new #Vector para guardar los valores
-				pos = Array.new #Vector para guardar los resultados
-				#i=1
-				#while i < @matriz.length # Recorre el vector de matriz visitando unicamente las posiciones no los valores
+			if @ancho == other.ancho
+				result = Array.new
+				pos = Array.new 
 				0.upto(@matriz.length/2-1) do |x|
 					i=x*2+1
-					t=false # Permite comprobar si el elemento i de matriz se ha introducido o no
-					#j=1
-					#while j < other.matriz.length #Recorre el vector de other.matriz unicamente por las posiciones
+					t=false 
 					0.upto(other.matriz.length/2-1) do |y|
 						j=y*2+1
-						if @matriz[i] == other.matriz[j] #Si las posiciones coinciden las suma
+						if @matriz[i] == other.matriz[j]
 							result << (@matriz[i-1]-other.matriz[j-1])
 							pos << @matriz[i]
-							t=true #Significa que la posicion i de matriz ya esta introducida en result
+							t=true 
 						end
 					end
-					if t==false # Si no se ha operado la posicion i de matriz se introduce tal cual
+					if t==false 
 						result << @matriz[i-1]
 						pos << @matriz[i]
 					end
 				end
 
-				#i=1
-				#while i < other.matriz.length #Recorre el vector other.matriz por las posiciones
+			
 				0.upto(other.matriz.length/2-1) do |x|
 					i=x*2+1
-					t=false # Indica si el elemento ya esta en result
+					t=false 
 					pos.length.times do |j|
 						if other.matriz[i]==pos[j]
 							t=true
@@ -149,7 +141,7 @@ class MatricesDis < Matrices
 				end
 				return MatricesDis.new(@ancho, result, pos)
 			end
-		##Final de Matrices Dispersas
+		
 		else 
 			if (other.instance_of?MatricesDen)
 				resultado= MatricesDen.new(@ancho)
@@ -158,9 +150,7 @@ class MatricesDis < Matrices
 	      				resultado.matriz[i][j]=other.matriz[i][j]
 				  end
 	  			end
-	  			#l=0
-	  			#while (l< @matriz.length)
-				0.upto(@matriz.length/2-1) do |x|
+	  			0.upto(@matriz.length/2-1) do |x|
 				  l=x*2+1
 				  j=@matriz[l+1]%other.ancho
 				  i=@matriz[l+1]/other.ancho
@@ -180,13 +170,9 @@ class MatricesDis < Matrices
 	  				@ancho.times do |j|
 	    				@ancho.times do |k|
 	    					t=false
-	    					#l=1
-	    					#while l < @matriz.length
 	    					0.upto(@matriz.length/2-1) do |x|
 								l=x*2+1
 	    						if matriz[l]==(i*@ancho+k)
-	    							#m=1
-	    							#while m < other.matriz.length
 	    							0.upto(other.matriz.length/2-1) do |y|
 										m=y*2+1
 	    								if other.matriz[m]==(k*ancho+j)
@@ -217,13 +203,7 @@ class MatricesDis < Matrices
 					  end
 					end
 					
-					#while (i < @ancho)
-					#   j=0
-					#   while (j < @ancho)
-					#		k=0	      					
-					#		while (k < @ancho)
-					#     	    l=0
-					#	    	while (l<@matriz.length)
+				
 					0.upto(@ancho) do |i|
 						0.upto(@ancho) do |j|
 							0.upto(@ancho) do |k|
@@ -231,11 +211,11 @@ class MatricesDis < Matrices
 									l=x*2+1
 						      		if (((@matriz[l+1]%@ancho)==j) && ((@matriz[l+1]/@ancho)==k))
 		  								resultado.matriz[i][j]+=other.matriz[i][k]*@matriz[l]
-						      		end #if
-						    	end #whilel
-	      					end #whilek
-					    end #whilej
-					end #whilei
+						      		end 
+						    	end 
+	      					end 
+					    end 
+					end 
 					resultado 
 				end	
 			end	

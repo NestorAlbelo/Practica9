@@ -1,5 +1,20 @@
 require "gcd.rb"
 
+# = Clase Fracciones.
+# La finalidad de esta clase es la de representar números racionales de la forma numerador/denominador y comprender un conjunto de operaciones.
+# Estas operaciones son:
+# - to_s.
+# - flotante: pasa el numero de la forma numerador/denominador a número flotante.
+# - abs : valor absoluto.
+# - reciproco: numerador/denominador -> denominador/numerador.
+# - opuesto: numerador/denominador -> -numerador/denominador.
+# - Suma.
+# - Resta.
+# - Multiplicar.
+# - División.
+# - Módulo.
+# - Coerce.
+# - <=> para este operador es necesario incluir el módulo Comparable.
 class Fracciones
 	include Comparable
 	def initialize(x,y)

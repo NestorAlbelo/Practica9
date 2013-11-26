@@ -1,6 +1,18 @@
 require "Matrices.rb" 
 require "Matrices_dispersas.rb" 
 
+# = Clase Martriz densas.
+#  En las matrices densas,el número de elementos debe se mayor que el #40% del tamaño de la matriz.
+#  Su finalidad es la representación y correcto almacenamiento de una matriz densa. Además de posibilitar las operaciones básicas como son:
+# - Suma.
+# - Resta.
+# - Multiplicación.
+# - Comparación de igualdad.
+# - Opuesto.
+# - Valor mínimo.
+# - Valor máximo.
+# Además se permite realizar operaciones con matrices dispersas. 
+
 class MatricesDen < Matrices
     def initialize(ancho,*elements)
     	super
@@ -92,13 +104,13 @@ class MatricesDen < Matrices
 								if (((other.matriz[l+1]%other.ancho)==j) && ((other.matriz[l+1]/  other.ancho)==k))
 		  							resultado.matriz[i][j]+=@matriz[i][k]*other.matriz[l]
 							
-								end #if
+								end 
 							end
-	      				end #while
-	   				end #whilej
-	 			end #whilei
-			end #elseif
-      	end #ifexterior
+	      				end 
+	   				end 
+	 			end 
+			end 
+      	end 
       	 resultado				
    	end
 
