@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Fracciones.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../Rakefile~.html">Rakefile~</a>
+  
+    <li class="file"><a href="../doc/Fracciones_html.html">Fracciones.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="../doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="../doc/Matrices_html.html">Matrices.html</a>
+  
+    <li class="file"><a href="../doc/MatricesDen_html.html">MatricesDen.html</a>
+  
+    <li class="file"><a href="../doc/MatricesDis_html.html">MatricesDis.html</a>
+  
+    <li class="file"><a href="../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../doc/Practica9_html.html">Practica9.html</a>
+  
+    <li class="file"><a href="../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../doc/Rakefile~_html.html">Rakefile~.html</a>
+  
+    <li class="file"><a href="../doc/Testeo_html.html">Testeo.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/lib/Fracciones_rb~_html.html">Fracciones_rb~.html</a>
+  
+    <li class="file"><a href="../doc/lib/Matrices_densas_rb~_html.html">Matrices_densas_rb~.html</a>
+  
+    <li class="file"><a href="../doc/lib/Matrices_dispersas_rb~_html.html">Matrices_dispersas_rb~.html</a>
+  
+    <li class="file"><a href="../doc/lib/Matrices_rb~_html.html">Matrices_rb~.html</a>
+  
+    <li class="file"><a href="../doc/lib/Prueba_rb~_html.html">Prueba_rb~.html</a>
+  
+    <li class="file"><a href="../doc/lib/gcd_rb~_html.html">gcd_rb~.html</a>
+  
+    <li class="file"><a href="../doc/practica9_gemspec_html.html">practica9_gemspec.html</a>
+  
+    <li class="file"><a href="../doc/practica9_gemspec~_html.html">practica9_gemspec~.html</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/spec/Matrices_spec_rb~_html.html">Matrices_spec_rb~.html</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../lib/Fracciones_rb~.html">Fracciones.rb~</a>
+  
+    <li class="file"><a href="../lib/Matrices_rb~.html">Matrices.rb~</a>
+  
+    <li class="file"><a href="../lib/Matrices_densas_rb~.html">Matrices_densas.rb~</a>
+  
+    <li class="file"><a href="../lib/Matrices_dispersas_rb~.html">Matrices_dispersas.rb~</a>
+  
+    <li class="file"><a href="../lib/Prueba_rb~.html">Prueba.rb~</a>
+  
+    <li class="file"><a href="../lib/gcd_rb~.html">gcd.rb~</a>
+  
+    <li class="file"><a href="../practica9_gemspec.html">practica9.gemspec</a>
+  
+    <li class="file"><a href="../practica9_gemspec~.html">practica9.gemspec~</a>
+  
+    <li class="file"><a href="../spec/Matrices_spec_rb~.html">Matrices_spec.rb~</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Fracciones.html">Fracciones</a>
+  
+    <li><a href="../Matrices.html">Matrices</a>
+  
+    <li><a href="../MatricesDen.html">MatricesDen</a>
+  
+    <li><a href="../MatricesDis.html">MatricesDis</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Practica9.html">Practica9</a>
+  
+    <li><a href="../Testeo.html">Testeo</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;class <a href="../Fracciones.html">Fracciones</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“./rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;./&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“./js/jquery.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body id=“top” class=“class”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;file-metadata&quot;&gt;
+  &lt;nav id=&quot;file-list-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Defined In&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;lib/Fracciones.rb
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;nav id=&quot;parent-class-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Parent&lt;/h3&gt;
+
+&lt;p class=&quot;link&quot;&gt;&lt;a href=&quot;Object.html&quot;&gt;Object&lt;/a&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;!-- Included Modules --&gt;</pre>
+
+<p>&lt;nav id=“includes-section” class=“section”&gt;</p>
+
+<pre>&lt;h3 class=&quot;section-header&quot;&gt;Included Modules&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;span class=&quot;include&quot;&gt;Comparable&lt;/span&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;nav id=“method-list-section” class=“section”&gt;</p>
+
+<pre>&lt;h3 class=&quot;section-header&quot;&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-c-new&quot;&gt;::new&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-25&quot;&gt;#%&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-2A&quot;&gt;#*&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-2B&quot;&gt;#+&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-2D&quot;&gt;#-&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-2F&quot;&gt;#/&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-3C-3D-3E&quot;&gt;#&amp;lt;=&amp;gt;&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-abs&quot;&gt;#abs&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-coerce&quot;&gt;#coerce&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-denom&quot;&gt;#denom&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-flotante&quot;&gt;#flotante&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-num&quot;&gt;#num&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-opuesto&quot;&gt;#opuesto&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-reciproco&quot;&gt;#reciproco&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-to_s&quot;&gt;#to_s&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Gemfile.html&quot;&gt;Gemfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Guardfile.html&quot;&gt;Guardfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./LICENSE_txt.html&quot;&gt;LICENSE&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./README_md.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Rakefile~.html&quot;&gt;Rakefile~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./doc/created_rid.html&quot;&gt;created.rid&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/Fracciones_rb~.html&quot;&gt;Fracciones.rb~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/Matrices_rb~.html&quot;&gt;Matrices.rb~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/Matrices_densas_rb~.html&quot;&gt;Matrices_densas.rb~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/Matrices_dispersas_rb~.html&quot;&gt;Matrices_dispersas.rb~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/Prueba_rb~.html&quot;&gt;Prueba.rb~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./lib/gcd_rb~.html&quot;&gt;gcd.rb~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./practica9_gemspec.html&quot;&gt;practica9.gemspec&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./practica9_gemspec~.html&quot;&gt;practica9.gemspec~&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./spec/Matrices_spec_rb~.html&quot;&gt;Matrices_spec.rb~&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Fracciones.html&quot;&gt;Fracciones&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Matrices.html&quot;&gt;Matrices&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./MatricesDen.html&quot;&gt;MatricesDen&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./MatricesDis.html&quot;&gt;MatricesDis&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Object.html&quot;&gt;Object&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Practica9.html&quot;&gt;Practica9&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Testeo.html&quot;&gt;Testeo&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation”&gt;</p>
+
+<pre class="ruby"><span class="ruby-operator">&lt;</span><span class="ruby-identifier">h1</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;class&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">class</span> <span class="ruby-constant">Fracciones</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h1&gt;
+
+&lt;div id=&quot;description&quot; class=&quot;description&quot;&gt;
+</span></pre>
+
+<p>&lt;h1 id=“label-Clase+Fracciones.”&gt;Clase &lt;a
+href=“Fracciones.html”&gt;Fracciones&lt;/a&gt;.&lt;span&gt;&lt;a
+href=“#label-Clase+Fracciones.”&gt;&amp;para;&lt;/a&gt; &lt;a
+href=“#documentation”&gt;&amp;uarr;&lt;/a&gt;&lt;/span&gt;&lt;/h1&gt;</p>
+
+<p>&lt;p&gt;La finalidad de esta clase es la de representar números racionales
+de la forma numerador/denominador y comprender un conjunto de operaciones.
+Estas operaciones son:&lt;/p&gt; &lt;ul&gt;&lt;li&gt;
+&lt;p&gt;to_s.&lt;/p&gt; &lt;/li&gt;&lt;li&gt; &lt;p&gt;flotante: pasa el
+numero de la forma numerador/denominador a número flotante.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt; &lt;p&gt;abs : valor absoluto.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt; &lt;p&gt;reciproco: numerador/denominador -&amp;gt;
+denominador/numerador.&lt;/p&gt; &lt;/li&gt;&lt;li&gt; &lt;p&gt;opuesto:
+numerador/denominador -&amp;gt; -numerador/denominador.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt; &lt;p&gt;Suma.&lt;/p&gt; &lt;/li&gt;&lt;li&gt;
+&lt;p&gt;Resta.&lt;/p&gt; &lt;/li&gt;&lt;li&gt;
+&lt;p&gt;Multiplicar.&lt;/p&gt; &lt;/li&gt;&lt;li&gt;
+&lt;p&gt;División.&lt;/p&gt; &lt;/li&gt;&lt;li&gt;
+&lt;p&gt;Módulo.&lt;/p&gt; &lt;/li&gt;&lt;li&gt; &lt;p&gt;Coerce.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt; &lt;p&gt;&amp;lt;=&amp;gt; para este operador es
+necesario incluir el módulo Comparable.&lt;/p&gt; &lt;/li&gt;&lt;/ul&gt;</p>
+
+<pre>&lt;/div&gt;&lt;!-- description --&gt;
+
+&lt;section id=&quot;5Buntitled-5D&quot; class=&quot;documentation-section&quot;&gt;
+
+  &lt;!-- Methods --&gt;
+
+   &lt;section id=&quot;public-class-5Buntitled-5D-method-details&quot; class=&quot;method-section section&quot;&gt;
+    &lt;h3 class=&quot;section-header&quot;&gt;Public Class Methods&lt;/h3&gt;
+
+    &lt;div id=&quot;method-c-new&quot; class=&quot;method-detail &quot;&gt;
+
+      &lt;div class=&quot;method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;new&lt;/span&gt;&lt;span
+          class=&quot;method-args&quot;&gt;(x,y)&lt;/span&gt;
+
+        &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+        &lt;div class=&quot;method-source-code&quot; id=&quot;new-source&quot;&gt;
+          &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 20&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;initialize&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;x&lt;/span&gt;,&lt;span
+class=“ruby-identifier”&gt;y&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;i&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;gcd&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;x&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;y&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;i&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;i&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>      &lt;/div&gt;&lt;!-- new-source --&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- new-method --&gt;
+
+&lt;/section&gt;&lt;!-- public-class-method-details --&gt;
+
+ &lt;section id=&quot;public-instance-5Buntitled-5D-method-details&quot; class=&quot;method-section section&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;Public Instance Methods&lt;/h3&gt;
+
+  &lt;div id=&quot;method-i-25&quot; class=&quot;method-detail &quot;&gt;
+
+    &lt;div class=&quot;method-heading&quot;&gt;
+      &lt;span class=&quot;method-name&quot;&gt;%&lt;/span&gt;&lt;span
+        class=&quot;method-args&quot;&gt;(other)&lt;/span&gt;
+
+      &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;div class=&quot;method-source-code&quot; id=&quot;25-source&quot;&gt;
+        &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 98&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;%&lt;/span&gt; (&lt;span
+class=“ruby-identifier”&gt;other&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;other&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;other&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- 25-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- 25-method --&gt;
+
+&lt;div id=&quot;method-i-2A&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;*&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(frac)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;2A-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 76&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;*&lt;/span&gt; (&lt;span
+class=“ruby-identifier”&gt;frac&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-value&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;  
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-constant&quot;&gt;Fracciones&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- 2A-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- 2A-method --&gt;
+
+&lt;div id=&quot;method-i-2B&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;+&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(frac)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;2B-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 54&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;+&lt;/span&gt; (&lt;span
+class=“ruby-identifier”&gt;frac&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;  
+&lt;span class=&quot;ruby-constant&quot;&gt;Fracciones&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- 2B-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- 2B-method --&gt;
+
+&lt;div id=&quot;method-i-2D&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;-&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(frac)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;2D-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 65&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;-&lt;/span&gt; (&lt;span
+class=“ruby-identifier”&gt;frac&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;  
+&lt;span class=&quot;ruby-constant&quot;&gt;Fracciones&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- 2D-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- 2D-method --&gt;
+
+&lt;div id=&quot;method-i-2F&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;/&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(frac)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;2F-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 87&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;/&lt;/span&gt; (&lt;span
+class=“ruby-identifier”&gt;frac&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;)
+ &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;-1&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;  
+  &lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;=(&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;frac&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-constant&quot;&gt;Fracciones&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;a&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;b&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- 2F-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- 2F-method --&gt;
+
+&lt;div id=&quot;method-i-3C-3D-3E&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;&amp;lt;=&amp;gt;&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(other)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;3C-3D-3E-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 103&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;&amp;lt;=&amp;gt;&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;other&lt;/span&gt;)</p>
+
+<pre>(&lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt;) &lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;=&amp;gt;&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;other&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;other&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- 3C-3D-3E-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- 3C-3D-3E-method --&gt;
+
+&lt;div id=&quot;method-i-abs&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;abs&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;abs-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 37&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;abs&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;)
+        &lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt; = &lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;)
+        &lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt; = &lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- abs-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- abs-method --&gt;
+
+&lt;div id=&quot;method-i-coerce&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;coerce&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(other)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;coerce-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 107&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;coerce&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;other&lt;/span&gt;)</p>
+
+<pre>[&lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;,&lt;span class=&quot;ruby-identifier&quot;&gt;other&lt;/span&gt;]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- coerce-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- coerce-method --&gt;
+
+&lt;div id=&quot;method-i-denom&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;denom&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;denom-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 28&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;denom&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- denom-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- denom-method --&gt;
+
+&lt;div id=&quot;method-i-flotante&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;flotante&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;flotante-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 34&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;flotante&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;denom&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- flotante-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- flotante-method --&gt;
+
+&lt;div id=&quot;method-i-num&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;num&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;num-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 25&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;num&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- num-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- num-method --&gt;
+
+&lt;div id=&quot;method-i-opuesto&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;opuesto&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;opuesto-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 50&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;opuesto&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;Fracciones&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt;,&lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- opuesto-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- opuesto-method --&gt;
+
+&lt;div id=&quot;method-i-reciproco&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;reciproco&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;reciproco-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 46&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;reciproco&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;Fracciones&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@denominador&lt;/span&gt;,&lt;span class=&quot;ruby-ivar&quot;&gt;@numerador&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- reciproco-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- reciproco-method --&gt;
+
+&lt;div id=&quot;method-i-to_s&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;to_s&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;to_s-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/Fracciones.rb, line 31&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;to_s&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{num}/#{denom}&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_s&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>        &lt;/div&gt;&lt;!-- to_s-source --&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;&lt;!-- to_s-method --&gt;
+
+  &lt;/section&gt;&lt;!-- public-instance-method-details --&gt;
+
+&lt;/section&gt;&lt;!-- 5Buntitled-5D --&gt;</pre>
+
+<p>&lt;/div&gt;&lt;!– documentation –&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 4.0.1.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

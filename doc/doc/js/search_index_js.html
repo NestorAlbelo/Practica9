@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>search_index.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../../README_md.html">README</a>
+  
+    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../Rakefile~.html">Rakefile~</a>
+  
+    <li class="file"><a href="../../doc/Fracciones_html.html">Fracciones.html</a>
+  
+    <li class="file"><a href="../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../../doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="../../doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="../../doc/Matrices_html.html">Matrices.html</a>
+  
+    <li class="file"><a href="../../doc/MatricesDen_html.html">MatricesDen.html</a>
+  
+    <li class="file"><a href="../../doc/MatricesDis_html.html">MatricesDis.html</a>
+  
+    <li class="file"><a href="../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../doc/Practica9_html.html">Practica9.html</a>
+  
+    <li class="file"><a href="../../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../doc/Rakefile~_html.html">Rakefile~.html</a>
+  
+    <li class="file"><a href="../../doc/Testeo_html.html">Testeo.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../doc/lib/Fracciones_rb~_html.html">Fracciones_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/lib/Matrices_densas_rb~_html.html">Matrices_densas_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/lib/Matrices_dispersas_rb~_html.html">Matrices_dispersas_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/lib/Matrices_rb~_html.html">Matrices_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/lib/Prueba_rb~_html.html">Prueba_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/lib/gcd_rb~_html.html">gcd_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/practica9_gemspec_html.html">practica9_gemspec.html</a>
+  
+    <li class="file"><a href="../../doc/practica9_gemspec~_html.html">practica9_gemspec~.html</a>
+  
+    <li class="file"><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/spec/Matrices_spec_rb~_html.html">Matrices_spec_rb~.html</a>
+  
+    <li class="file"><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../lib/Fracciones_rb~.html">Fracciones.rb~</a>
+  
+    <li class="file"><a href="../../lib/Matrices_rb~.html">Matrices.rb~</a>
+  
+    <li class="file"><a href="../../lib/Matrices_densas_rb~.html">Matrices_densas.rb~</a>
+  
+    <li class="file"><a href="../../lib/Matrices_dispersas_rb~.html">Matrices_dispersas.rb~</a>
+  
+    <li class="file"><a href="../../lib/Prueba_rb~.html">Prueba.rb~</a>
+  
+    <li class="file"><a href="../../lib/gcd_rb~.html">gcd.rb~</a>
+  
+    <li class="file"><a href="../../practica9_gemspec.html">practica9.gemspec</a>
+  
+    <li class="file"><a href="../../practica9_gemspec~.html">practica9.gemspec~</a>
+  
+    <li class="file"><a href="../../spec/Matrices_spec_rb~.html">Matrices_spec.rb~</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Fracciones.html">Fracciones</a>
+  
+    <li><a href="../../Matrices.html">Matrices</a>
+  
+    <li><a href="../../MatricesDen.html">MatricesDen</a>
+  
+    <li><a href="../../MatricesDis.html">MatricesDis</a>
+  
+    <li><a href="../../Object.html">Object</a>
+  
+    <li><a href="../../Practica9.html">Practica9</a>
+  
+    <li><a href="../../Testeo.html">Testeo</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>var search_data = {“index”:{“<a
+href="http://">searchIndex”:[“fracciones”,“matrices”,“matricesden”,“matricesdis”,“object”,“practica9”,“testeo”,“%()”,“*()”,“*()”,“*()”,“+()”,“+()”,“+()”,“-()”,“-()”,“-()”,“-@()”,“-@()”,“/()”,“<=>()”,“==()”,“==()”,“</a>()”,“[]=()”,“<a
+href="http://">abs()”,“coerce()”,“denom()”,“flotante()”,“gcd()”,“max()”,“max()”,“min()”,“min()”,“new()”,“new()”,“new()”,“new()”,“num()”,“opuesto()”,“reciproco()”,“setup()”,“tear_down()”,“test_inversa()”,“test_multiplicar()”,“test_objeto()”,“test_resta()”,“test_suma()”,“to_s()”,“to_s()”,“gemfile”,“guardfile”,“license”,“readme”,“rakefile”,“rakefile~”,“created.rid”,“fracciones.rb~”,“matrices.rb~”,“matrices_densas.rb~”,“matrices_dispersas.rb~”,“prueba.rb~”,“gcd.rb~”,“practica9.gemspec”,“practica9.gemspec~”,“matrices_spec.rb~”],“longSearchIndex”:[“fracciones”,“matrices”,“matricesden”,“matricesdis”,“object”,“practica9”,“testeo”,“fracciones#%()”,“fracciones#*()”,“matricesden#*()”,“matricesdis#*()”,“fracciones#+()”,“matricesden#+()”,“matricesdis#+()”,“fracciones#-()”,“matricesden#-()”,“matricesdis#-()”,“matricesden#-@()”,“matricesdis#-@()”,“fracciones#/()”,“fracciones#<=>()”,“matricesden#==()”,“matricesdis#==()”,“matrices#</a>()”,“<a
+href="http://">matrices#</a>,”info“:[[”Fracciones“,”“,”Fracciones.html“,”“,”&lt;p&gt;Clase
+<a href="../../Fracciones.html">Fracciones</a>.n&lt;p&gt;La finalidad de
+esta clase es la de representar números racionales de lanforma
+numerador/denominador
+…n“],[”Matrices“,”“,”Matrices.html“,”“,”&lt;p&gt;Clase madre
+Matriz.n&lt;p&gt;Contiene los métodos comunes entres las clase matrizDen y
+matrizDis, quenson:n&lt;p&gt;att_reader
+…n“],[”MatricesDen“,”“,”MatricesDen.html“,”“,”&lt;p&gt;Clase Martriz
+densas.nn&lt;pre&gt;En las matrices densas,el número de elementos debe se
+mayor que el #40% del tamaño
+…&lt;/pre&gt;n“],[”MatricesDis“,”“,”MatricesDis.html“,”“,”&lt;p&gt;Clase
+Martriz dispersa.nn&lt;pre&gt;En las matrices dispersas,el número de
+elementos no puede se mayor que el #40% …&lt;/<a
+href="http://"Object","","Object.html","",""">pre>n“],</a>,[”<a
+href="http://"Testeo","","Testeo.html","",""">Practica9“,”“,”Practica9.html“,”“,”“],</a>,[”%“,”<a
+href="http://"*","Fracciones","Fracciones.html#method-i-2A","(frac)",""">Fracciones“,”Fracciones.html#method-i-25“,”(other)“,”“],</a>,[”*“,”<a
+href="http://"*","MatricesDis","MatricesDis.html#method-i-2A","(other)",""">MatricesDen“,”MatricesDen.html#method-i-2A“,”(other)“,”“],</a>,[”+“,”<a
+href="http://"+","MatricesDen","MatricesDen.html#method-i-2B","(other)",""">Fracciones“,”Fracciones.html#method-i-2B“,”(frac)“,”“],</a>,[”+“,”<a
+href="http://"-","Fracciones","Fracciones.html#method-i-2D","(frac)",""">MatricesDis“,”MatricesDis.html#method-i-2B“,”(other)“,”“],</a>,[”-“,”<a
+href="http://"-","MatricesDis","MatricesDis.html#method-i-2D","(other)",""">MatricesDen“,”MatricesDen.html#method-i-2D“,”(other)“,”“],</a>,[”-@“,”<a
+href="http://"-@","MatricesDis","MatricesDis.html#method-i-2D-40","()",""">MatricesDen“,”MatricesDen.html#method-i-2D-40“,”()“,”“],</a>,[”/“,”<a
+href="http://"<=>“,”Fracciones“,”Fracciones.html#method-i-3C-3D-3E“,”(other)“,”“”>Fracciones“,”Fracciones.html#method-i-2F“,”(frac)“,”“],</a>,[”==“,”<a
+href="http://"==","MatricesDis","MatricesDis.html#method-i-3D-3D","(other)",""">MatricesDen“,”MatricesDen.html#method-i-3D-3D“,”(other)“,”“],</a>,[”[]“,”<a
+href="http://">Matrices“,”Matrices.html#method-i-5B-5D“,”(i)“,”“],[”</a>=“,”<a
+href="http://"abs","Fracciones","Fracciones.html#method-i-abs","()",""">Matrices“,”Matrices.html#method-i-5B-5D-3D“,”(i,other)“,”“],</a>,[”<a
+href="http://"denom","Fracciones","Fracciones.html#method-i-denom","()",""">coerce“,”Fracciones“,”Fracciones.html#method-i-coerce“,”(other)“,”“],</a>,[”flotante“,”Fracciones“,”Fracciones.html#method-i-flotante“,”()“,”“],[”gcd“,”Object“,”Object.html#method-i-gcd“,”(u,
+v)“,”&lt;p&gt;Función de Máximo común divisor de dos numeros.n&lt;p&gt;Esta
+funciçón es utilizada por la clase <a
+href="http://"max","MatricesDen","MatricesDen.html#method-i-max","()",""">Fracciones.n“],</a>,[”<a
+href="http://"min","MatricesDen","MatricesDen.html#method-i-min","()",""">max“,”MatricesDis“,”MatricesDis.html#method-i-max“,”()“,”“],</a>,[”<a
+href="http://"new","Fracciones","Fracciones.html#method-c-new","(x,y)",""">min“,”MatricesDis“,”MatricesDis.html#method-i-min“,”()“,”“],</a>,[”<a
+href="http://"new","MatricesDen","MatricesDen.html#method-c-new","(ancho,*elements)",""">new“,”Matrices“,”Matrices.html#method-c-new“,”(ancho,*elements)“,”“],</a>,[”new“,”MatricesDis“,”MatricesDis.html#method-c-new“,”(ancho,elementos=nil,
+<a
+href="http://"num","Fracciones","Fracciones.html#method-i-num","()",""">posiciones=nil)“,”“],</a>,[”<a
+href="http://"reciproco","Fracciones","Fracciones.html#method-i-reciproco","()",""">opuesto“,”Fracciones“,”Fracciones.html#method-i-opuesto“,”()“,”“],</a>,[”<a
+href="http://"tear_down","Testeo","Testeo.html#method-i-tear_down","()",""">setup“,”Testeo“,”Testeo.html#method-i-setup“,”()“,”“],</a>,[”<a
+href="http://"test_multiplicar","Testeo","Testeo.html#method-i-test_multiplicar","()",""">test_inversa“,”Testeo“,”Testeo.html#method-i-test_inversa“,”()“,”“],</a>,[”<a
+href="http://"test_resta","Testeo","Testeo.html#method-i-test_resta","()",""">test_objeto“,”Testeo“,”Testeo.html#method-i-test_objeto“,”()“,”“],</a>,[”<a
+href="http://"to_s","Fracciones","Fracciones.html#method-i-to_s","()",""">test_suma“,”Testeo“,”Testeo.html#method-i-test_suma“,”()“,”“],</a>,[”to_s“,”Matrices“,”Matrices.html#method-i-to_s“,”()“,”“],[”Gemfile“,”“,”Gemfile.html“,”“,”&lt;p&gt;source
+‘rubygems.org’n&lt;p&gt;# Specify your gem’s dependencies in <a
+href="../../practica9_gemspec.html">practica9.gemspec</a>
+gemspecn“],[”Guardfile“,”“,”Guardfile.html“,”“,”&lt;p&gt;# A sample <a
+href="../../Guardfile.html">Guardfile</a> # More info at
+github.com/guard/guard#readmen&lt;p&gt;guard :bundler
+donn&lt;pre&gt;watch(‘Gemfile’)n#
+…&lt;/pre&gt;n“],[”LICENSE“,”“,”LICENSE_txt.html“,”“,”&lt;p&gt;Copyright ©
+2013 Alejandro Hernándezn&lt;p&gt;MIT Licensen&lt;p&gt;Permission is hereby
+granted, free of charge, to any
+…n“],[”README“,”“,”README_md.html“,”“,”&lt;p&gt;Practica9 - <a
+href="../../Matrices.html">Matrices</a> Densas y
+Dispersasn&lt;p&gt;Descriptionn&lt;p&gt;En esta practica se procedera a
+implementar una clase
+…n“],[”Rakefile“,”“,”Rakefile.html“,”“,”&lt;p&gt;require
+“bundler/gem_tasks” $:.unshift File.dirname(__FILE__) + ‘lib’n$:.unshift
+‘./lib’,‘./spec’ …n“],[”Rakefile~“,”“,”Rakefile~.html“,”“,”&lt;p&gt;require
+“<a
+href="http://"created.rid","","doc/created_rid.html","",""">bundler/gem_tasks”n“],</a>,[”Fracciones.rb~“,”“,”lib/Fracciones_rb~.html“,”“,”&lt;p&gt;require
+“gcd.rb”n&lt;p&gt;class Fraccionesnn&lt;pre
+class=&quot;ruby&quot;&gt;&lt;span
+class=&quot;ruby-identifier&quot;&gt;include&lt;/span&gt; &lt;span
+class=&quot;ruby-constant&quot;&gt;Comparable&lt;/span&gt;n&lt;span
+class=&quot;ruby-keyword&quot;&gt;def&lt;/span&gt; &lt;span
+class=&quot;ruby-identifier&quot;&gt;initialize&lt;/span&gt;(&lt;span
+class=&quot;ruby-identifier&quot;&gt;x&lt;/span&gt;,&lt;span
+class=&quot;ruby-identifier&quot;&gt;y&lt;/span&gt;)n        &lt;span
+class=&quot;ruby-identifier&quot;&gt;i&lt;/span&gt;=&lt;span
+class=&quot;ruby-identifier&quot;&gt;gcd&lt;/span&gt;(&lt;span
+class=&quot;ruby-identifier&quot;&gt;x&lt;/span&gt;,&lt;span
+class=&quot;ruby-identifier&quot;&gt;y&lt;/span&gt;)n &lt;span
+class=&quot;ruby-operator&quot;&gt;…&lt;/span&gt;n&lt;/pre&gt;n“],[”Matrices.rb~“,”“,”lib/Matrices_rb~.html“,”“,”&lt;p&gt;class
+Matricesnn&lt;pre class=&quot;ruby&quot;&gt;&lt;span
+class=&quot;ruby-identifier&quot;&gt;attr_reader&lt;/span&gt; :&lt;span
+class=&quot;ruby-identifier&quot;&gt;ancho&lt;/span&gt;, :&lt;span
+class=&quot;ruby-identifier&quot;&gt;matriz&lt;/span&gt;n&lt;span
+class=&quot;ruby-keyword&quot;&gt;def&lt;/span&gt; &lt;span
+class=&quot;ruby-identifier&quot;&gt;initialize&lt;/span&gt;(&lt;span
+class=&quot;ruby-identifier&quot;&gt;ancho&lt;/span&gt;,&lt;span
+class=&quot;ruby-operator&quot;&gt;*&lt;/span&gt;&lt;span
+class=&quot;ruby-identifier&quot;&gt;elements&lt;/span&gt;)n  &lt;span
+class=&quot;ruby-ivar&quot;&gt;@ancho&lt;/span&gt;=&lt;span
+class=&quot;ruby-identifier&quot;&gt;ancho&lt;/span&gt;n&lt;span
+class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;n&lt;span
+class=&quot;ruby-keyword&quot;&gt;def&lt;/span&gt; &lt;span
+class=&quot;ruby-identifier&quot;&gt;to_s&lt;/span&gt; &lt;span
+class=&quot;ruby-operator&quot;&gt;…&lt;/span&gt;n&lt;/pre&gt;n“],[”Matrices_densas.rb~“,”“,”lib/Matrices_densas_rb~.html“,”“,”&lt;p&gt;require
+“Matrices.rb”  require “Matrices_dispersas.rb”n&lt;p&gt;# = Clase Martriz
+densas.
+…n“],[”Matrices_dispersas.rb~“,”“,”lib/Matrices_dispersas_rb~.html“,”“,”&lt;p&gt;require
+“Matrices.rb” require “Matrices_densas.rb”n&lt;p&gt;# = Clase Martriz
+dispersa. # 
+…n“],[”Prueba.rb~“,”“,”lib/Prueba_rb~.html“,”“,”&lt;p&gt;require
+“Matrices_dispersas.rb” require
+“Matrices_densas.rb”n&lt;p&gt;m1=MatricesDen.new(2,4,4,4,4)
+…n“],[”gcd.rb~“,”“,”lib/gcd_rb~.html“,”“,”&lt;p&gt;def gcd(u,
+v)nn&lt;pre&gt;u, v = u.abs, v.absnwhile v != 0n  u, v = v, u %
+vnendnu&lt;/pre&gt;n&lt;p&gt;endn“],[”practica9.gemspec“,”“,”practica9_gemspec.html“,”“,”&lt;p&gt;lib
+= File.expand_path(‘../lib’, __FILE__) $LOAD_PATH.unshift(lib)
+unlessn$LOAD_PATH.include?(lib) require
+…n“],[”practica9.gemspec~“,”“,”practica9_gemspec~.html“,”“,”&lt;p&gt;lib =
+File.expand_path(‘../lib’, __FILE__) $LOAD_PATH.unshift(lib)
+unlessn$LOAD_PATH.include?(lib) require
+…n“],[”Matrices_spec.rb~“,”“,”spec/Matrices_spec_rb~.html“,”“,”&lt;p&gt;require
+“Matrices_densas.rb” require “Matrices_dispersas.rb”
+requiren“Fracciones.rb” …n“]]}}</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

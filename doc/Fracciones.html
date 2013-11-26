@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Fracciones - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/Fracciones.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-25">#%</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-2F">#/</a>
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-abs">#abs</a>
+    
+    <li ><a href="#method-i-coerce">#coerce</a>
+    
+    <li ><a href="#method-i-denom">#denom</a>
+    
+    <li ><a href="#method-i-flotante">#flotante</a>
+    
+    <li ><a href="#method-i-num">#num</a>
+    
+    <li ><a href="#method-i-opuesto">#opuesto</a>
+    
+    <li ><a href="#method-i-reciproco">#reciproco</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./Rakefile~.html">Rakefile~</a>
+  
+    <li class="file"><a href="./doc/Fracciones_html.html">Fracciones.html</a>
+  
+    <li class="file"><a href="./doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="./doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="./doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="./doc/Matrices_html.html">Matrices.html</a>
+  
+    <li class="file"><a href="./doc/MatricesDen_html.html">MatricesDen.html</a>
+  
+    <li class="file"><a href="./doc/MatricesDis_html.html">MatricesDis.html</a>
+  
+    <li class="file"><a href="./doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="./doc/Practica9_html.html">Practica9.html</a>
+  
+    <li class="file"><a href="./doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="./doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="./doc/Rakefile~_html.html">Rakefile~.html</a>
+  
+    <li class="file"><a href="./doc/Testeo_html.html">Testeo.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="./doc/lib/Fracciones_rb~_html.html">Fracciones_rb~.html</a>
+  
+    <li class="file"><a href="./doc/lib/Matrices_densas_rb~_html.html">Matrices_densas_rb~.html</a>
+  
+    <li class="file"><a href="./doc/lib/Matrices_dispersas_rb~_html.html">Matrices_dispersas_rb~.html</a>
+  
+    <li class="file"><a href="./doc/lib/Matrices_rb~_html.html">Matrices_rb~.html</a>
+  
+    <li class="file"><a href="./doc/lib/Prueba_rb~_html.html">Prueba_rb~.html</a>
+  
+    <li class="file"><a href="./doc/lib/gcd_rb~_html.html">gcd_rb~.html</a>
+  
+    <li class="file"><a href="./doc/practica9_gemspec_html.html">practica9_gemspec.html</a>
+  
+    <li class="file"><a href="./doc/practica9_gemspec~_html.html">practica9_gemspec~.html</a>
+  
+    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/spec/Matrices_spec_rb~_html.html">Matrices_spec_rb~.html</a>
+  
+    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="./lib/Fracciones_rb~.html">Fracciones.rb~</a>
+  
+    <li class="file"><a href="./lib/Matrices_rb~.html">Matrices.rb~</a>
+  
+    <li class="file"><a href="./lib/Matrices_densas_rb~.html">Matrices_densas.rb~</a>
+  
+    <li class="file"><a href="./lib/Matrices_dispersas_rb~.html">Matrices_dispersas.rb~</a>
+  
+    <li class="file"><a href="./lib/Prueba_rb~.html">Prueba.rb~</a>
+  
+    <li class="file"><a href="./lib/gcd_rb~.html">gcd.rb~</a>
+  
+    <li class="file"><a href="./practica9_gemspec.html">practica9.gemspec</a>
+  
+    <li class="file"><a href="./practica9_gemspec~.html">practica9.gemspec~</a>
+  
+    <li class="file"><a href="./spec/Matrices_spec_rb~.html">Matrices_spec.rb~</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Fracciones.html">Fracciones</a>
+  
+    <li><a href="./Matrices.html">Matrices</a>
+  
+    <li><a href="./MatricesDen.html">MatricesDen</a>
+  
+    <li><a href="./MatricesDis.html">MatricesDis</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Practica9.html">Practica9</a>
+  
+    <li><a href="./Testeo.html">Testeo</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Fracciones</h1>
+
+  <div id="description" class="description">
+    
+<h1 id="label-Clase+Fracciones.">Clase <a href="Fracciones.html">Fracciones</a>.<span><a href="#label-Clase+Fracciones.">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>La finalidad de esta clase es la de representar números racionales de la
+forma numerador/denominador y comprender un conjunto de operaciones. Estas
+operaciones son:</p>
+<ul><li>
+<p>to_s.</p>
+</li><li>
+<p>flotante: pasa el numero de la forma numerador/denominador a número
+flotante.</p>
+</li><li>
+<p>abs : valor absoluto.</p>
+</li><li>
+<p>reciproco: numerador/denominador -&gt; denominador/numerador.</p>
+</li><li>
+<p>opuesto: numerador/denominador -&gt; -numerador/denominador.</p>
+</li><li>
+<p>Suma.</p>
+</li><li>
+<p>Resta.</p>
+</li><li>
+<p>Multiplicar.</p>
+</li><li>
+<p>División.</p>
+</li><li>
+<p>Módulo.</p>
+</li><li>
+<p>Coerce.</p>
+</li><li>
+<p>&lt;=&gt; para este operador es necesario incluir el módulo Comparable.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(x,y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-identifier">i</span>=<span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-ivar">@numerador</span>=<span class="ruby-identifier">x</span><span class="ruby-operator">/</span><span class="ruby-identifier">i</span>
+        <span class="ruby-ivar">@denominador</span>=<span class="ruby-identifier">y</span><span class="ruby-operator">/</span><span class="ruby-identifier">i</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">%</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="25-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span> (<span class="ruby-identifier">other</span>)
+        <span class="ruby-identifier">a</span> = <span class="ruby-identifier">num</span><span class="ruby-operator">/</span><span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">b</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">a</span><span class="ruby-operator">%</span><span class="ruby-identifier">b</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 25-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 25-method -->
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(frac)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">frac</span>)
+        <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">frac</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+          <span class="ruby-identifier">a</span>=<span class="ruby-value">0</span>
+          <span class="ruby-identifier">b</span>=<span class="ruby-value">1</span>
+        <span class="ruby-keyword">else</span>  
+          <span class="ruby-identifier">a</span>=(<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">num</span>)
+          <span class="ruby-identifier">b</span>=(<span class="ruby-identifier">denom</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">denom</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">Fracciones</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(frac)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">frac</span>)
+        <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">frac</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+          <span class="ruby-identifier">a</span>=<span class="ruby-identifier">num</span>
+          <span class="ruby-identifier">b</span>=<span class="ruby-identifier">denom</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">a</span>=(<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">denom</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">frac</span>.<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-identifier">denom</span>)
+          <span class="ruby-identifier">b</span>=(<span class="ruby-identifier">denom</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">denom</span>)
+        <span class="ruby-keyword">end</span>  
+        <span class="ruby-constant">Fracciones</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(frac)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">frac</span>)
+        <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">frac</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+          <span class="ruby-identifier">a</span>=<span class="ruby-identifier">num</span>
+          <span class="ruby-identifier">b</span>=<span class="ruby-identifier">denom</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">a</span>=(<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">denom</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">frac</span>.<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-identifier">denom</span>)
+          <span class="ruby-identifier">b</span>=(<span class="ruby-identifier">denom</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">denom</span>)
+        <span class="ruby-keyword">end</span>  
+        <span class="ruby-constant">Fracciones</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(frac)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">frac</span>)
+        <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">frac</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+         <span class="ruby-keyword">return</span> <span class="ruby-value">-1</span>
+        <span class="ruby-keyword">else</span>  
+          <span class="ruby-identifier">a</span>=(<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">denom</span>)
+          <span class="ruby-identifier">b</span>=(<span class="ruby-identifier">denom</span><span class="ruby-operator">*</span><span class="ruby-identifier">frac</span>.<span class="ruby-identifier">num</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">Fracciones</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+        (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span>) <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">num</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span>)
+                <span class="ruby-ivar">@numerador</span> = <span class="ruby-operator">-</span> <span class="ruby-ivar">@numerador</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">denom</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span>)
+                <span class="ruby-ivar">@denominador</span> = <span class="ruby-operator">-</span> <span class="ruby-ivar">@denominador</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- abs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
+  [<span class="ruby-keyword">self</span>,<span class="ruby-identifier">other</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-denom" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">denom</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="denom-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">denom</span>
+        <span class="ruby-ivar">@denominador</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- denom-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- denom-method -->
+
+    
+      <div id="method-i-flotante" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">flotante</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="flotante-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flotante</span>
+        <span class="ruby-identifier">num</span><span class="ruby-operator">/</span><span class="ruby-identifier">denom</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- flotante-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- flotante-method -->
+
+    
+      <div id="method-i-num" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">num</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="num-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">num</span>
+        <span class="ruby-ivar">@numerador</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- num-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- num-method -->
+
+    
+      <div id="method-i-opuesto" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">opuesto</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="opuesto-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">opuesto</span>
+        <span class="ruby-constant">Fracciones</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@numerador</span>,<span class="ruby-ivar">@denominador</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- opuesto-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- opuesto-method -->
+
+    
+      <div id="method-i-reciproco" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reciproco</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="reciproco-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reciproco</span>
+        <span class="ruby-constant">Fracciones</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@denominador</span>,<span class="ruby-ivar">@numerador</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- reciproco-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- reciproco-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/Fracciones.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+        <span class="ruby-node">&quot;#{num}/#{denom}&quot;</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
