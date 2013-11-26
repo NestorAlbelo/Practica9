@@ -5,11 +5,11 @@ class MatricesDen < Matrices
     def initialize(ancho,*elements)
     	super
       	@matriz= Array.new(ancho)
-      	for j in 0...ancho
+      	ancho.times do |j|
 			@matriz[j]=Array.new(ancho)
       	end
-      	for i in 0...ancho
-			for k in 0...ancho
+      	ancho.times do |i|
+			ancho.times do |k|
 	  			@matriz[i][k]=elements[i*ancho+k]
 			end
       	end
@@ -18,24 +18,23 @@ class MatricesDen < Matrices
     def +(other)
       	resultado= MatricesDen.new(@ancho)
       	if (other.instance_of?MatricesDen)
-			for i in 0...@ancho
-	  			for j in 0...@ancho
+			@ancho.times do |i|
+	  			@ancho.times do |j|
 	      			resultado.matriz[i][j]=@matriz[i][j]+other.matriz[i][j]
 	  			end
 			end
      	else 
 			if (other.instance_of?MatricesDis)
-	  			for i in 0...@ancho
-	    			for j in 0...@ancho
+	  			@ancho.times do |i|
+	    			@ancho.times do |j|
 	      				resultado[i][j]=@matriz[i][j]+0
 	    			end
 	  			end
-	  			l=0
-	  			while l<other.matriz.length
+	  			0.upto(other.matriz.length/2-1) do |x|
+					l=x*2
 	    			j=other.matriz[l+1]%other.ancho
 	    			i=other.matriz[l+1]/other.ancho
 	    			resultado[i][j]=@matriz[i][j]+other.matriz[l]
-	    			l+=2
 	  			end
 			end
       	end
@@ -45,25 +44,24 @@ class MatricesDen < Matrices
     def - (other)
 		resultado= MatricesDen.new(@ancho)
       	if (other.instance_of? MatricesDen)
-			for i in 0...@ancho
-	  			for j in 0...@ancho
+			@ancho.times do |i|
+	  			@ancho.times do |j|
 	      			resultado.matriz[i][j]=@matriz[i][j]-other.matriz[i][j]
 	  			end
 			end
       	else 
 			if (other.instance_of? MatricesDis)
-	  			for i in 0...@ancho
-	    			for j in 0...@ancho
+	  			@ancho.times do |i|
+	    			@ancho.times do |j|
 	      				resultado.matriz[i][j]=@matriz[i][j]-0
 	    			end
 	  			end
-	  			l=0
-	  			while (l<other.matriz.length)
+	  			0.upto(other.matriz.length/2-1) do |x|
+					l=x*2
 	    			j=other.matriz[l+1]%other.ancho
 	    			i=other.matriz[l+1]/other.ancho
 	    			resultado.matriz[i][j]=@matriz[i][j]-other.matriz[l]
-	    			l+=2
-	  			end
+	    		end
 			end
       	end
       	resultado
@@ -71,40 +69,33 @@ class MatricesDen < Matrices
    
     def * (other)
       	resultado= MatricesDen.new(@ancho)
-      	for i in 0...@ancho
-			for j in 0...@ancho
+      	@ancho.times do |i|
+			@ancho.times do |j|
 	 			resultado.matriz[i][j]=0
 			end
       	end
       	if (other.instance_of? MatricesDen)
-			for i in 0...@ancho
-	  			for j in 0...@ancho
-	    			for k in 0...@ancho
+			@ancho.times do |i|
+	  			@ancho.times do |j|
+	    			@ancho.times do |k|
 	      				resultado.matriz[i][j]+=@matriz[i][k]*other.matriz[k][j]
 	    			end
 	  			end
 			end
      	else
 			if (other.instance_of? MatricesDis)				
-				i=j=k=0
-	  			while (i < @ancho)
-					j=0
-	   				while (j < @ancho)
-						k=0	      					
-						while (k < @ancho)
-							l=0
-							while (l<other.matriz.length)
+				0.upto(@ancho) do |i|
+					0.upto(@ancho) do |j|
+						0.upto(@ancho) do |k|
+							0.upto(other.matriz.length/2-1) do |l|
+								l=x*2
 								if (((other.matriz[l+1]%other.ancho)==j) && ((other.matriz[l+1]/  other.ancho)==k))
 		  							resultado.matriz[i][j]+=@matriz[i][k]*other.matriz[l]
 							
 								end #if
-								l+=2
 							end
-							k+=1
-	      					end #whilek
-	      					j+=1
+	      				end #while
 	   				end #whilej
-	   				i+=1
 	 			end #whilei
 			end #elseif
       	end #ifexterior
@@ -113,8 +104,8 @@ class MatricesDen < Matrices
 
     def -@
       	resultado= MatricesDen.new(@ancho)
-      	for i in 0...@ancho
-			for j in 0...@ancho
+      	@ancho.times do |i|
+			@ancho.times do |j|
 	  			resultado.matriz[i][j]=-@matriz[i][j]
 			end
       	end
@@ -125,8 +116,8 @@ class MatricesDen < Matrices
       	if (other.instance_of? MatricesDis)
 			return false
       	end  
-      	for i in 0...@ancho
-			for j in 0...@ancho
+      	@ancho.times do |i|
+			@ancho.times do |j|
 	    		if(matriz[i][j]!=other.matriz[i][j])
 	      			return false
 	    		end
@@ -138,8 +129,8 @@ class MatricesDen < Matrices
 
     def max
       	maxtem=-99999999999999
-      	for i in 0...@ancho
-			for j in 0...@ancho
+      	@ancho.times do |i|
+			@ancho.times do |j|
 	  			if (@matriz[i][j] > maxtem)
 	    			maxtem=@matriz[i][j]
 	  			end
@@ -150,8 +141,8 @@ class MatricesDen < Matrices
     
     def min
       	mintem=+99999999999999
-      	for i in 0...@ancho
-			for j in 0...@ancho
+      	@ancho.times do |i|
+			@ancho.times do |j|
 	  			if (@matriz[i][j] < mintem)
 	   				mintem=@matriz[i][j]
 	  			end
