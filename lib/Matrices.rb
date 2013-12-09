@@ -14,7 +14,7 @@ class Matrices
 	  @ancho=ancho
 	end
 	def to_s
-	  @matriz
+	  "#{@matriz}"
 	end  
 	def [](i)
 		@matriz[i]

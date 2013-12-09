@@ -36,6 +36,7 @@ class MatricesDis < Matrices
 				pos = Array.new 
 				0.upto(@matriz.length/2-1) do |x|
 					i=x*2+1
+					t=false
 					0.upto(other.matriz.length/2-1) do |y|
 					    j=y*2+1  
 						if @matriz[i] == other.matriz[j] 
@@ -208,7 +209,7 @@ class MatricesDis < Matrices
 						0.upto(@ancho) do |j|
 							0.upto(@ancho) do |k|
 								0.upto(@matriz.length/2-1) do |x|
-									l=x*2+1
+									l=x*2
 						      		if (((@matriz[l+1]%@ancho)==j) && ((@matriz[l+1]/@ancho)==k))
 		  								resultado.matriz[i][j]+=other.matriz[i][k]*@matriz[l]
 						      		end 

@@ -20,13 +20,24 @@ class MatricesDen < Matrices
       	ancho.times do |j|
 			@matriz[j]=Array.new(ancho)
       	end
-      	ancho.times do |i|
-			ancho.times do |k|
+	
+	if elements[0].instance_of? Array
+	  t=elements[0]
+	  ancho.times do |i|
+			 ancho.times do |k|
+	  			@matriz[i][k]=t[i*ancho+k]
+			 end
+	  end
+	else
+	  ancho.times do |i|
+			 ancho.times do |k|
 	  			@matriz[i][k]=elements[i*ancho+k]
-			end
-      	end
+			 end
+	  end
+	end
     end
     
+  
     def +(other)
       	resultado= MatricesDen.new(@ancho)
       	if (other.instance_of?MatricesDen)
@@ -95,11 +106,11 @@ class MatricesDen < Matrices
 	  			end
 			end
      	else
-			if (other.instance_of? MatricesDis)				
+			if (other.instance_of? MatricesDis)					
 				0.upto(@ancho) do |i|
 					0.upto(@ancho) do |j|
 						0.upto(@ancho) do |k|
-							0.upto(other.matriz.length/2-1) do |l|
+							0.upto(other.matriz.length/2-1) do |x|
 								l=x*2
 								if (((other.matriz[l+1]%other.ancho)==j) && ((other.matriz[l+1]/  other.ancho)==k))
 		  							resultado.matriz[i][j]+=@matriz[i][k]*other.matriz[l]
@@ -130,9 +141,9 @@ class MatricesDen < Matrices
       	end  
       	@ancho.times do |i|
 			@ancho.times do |j|
-	    		if(matriz[i][j]!=other.matriz[i][j])
+			  if(matriz[i][j]!=other.matriz[i][j])
 	      			return false
-	    		end
+			  end
 			end
      	end
       	return true
@@ -149,6 +160,17 @@ class MatricesDen < Matrices
 			end
       	end
       	return maxtem
+    end
+    
+    def encontrar
+	@ancho.times do |i|
+		@ancho.times do |j|
+	  		if yield(@matriz[i][j])
+	    			return [i,j]
+	  		end
+		end
+	end
+	return nil
     end
     
     def min
