@@ -107,9 +107,9 @@ class MatricesDen < Matrices
 			end
      	else
 			if (other.instance_of? MatricesDis)					
-				0.upto(@ancho) do |i|
-					0.upto(@ancho) do |j|
-						0.upto(@ancho) do |k|
+				0.upto(@ancho-1) do |i|
+					0.upto(@ancho-1) do |j|
+						0.upto(@ancho-1) do |k|
 							0.upto(other.matriz.length/2-1) do |x|
 								l=x*2
 								if (((other.matriz[l+1]%other.ancho)==j) && ((other.matriz[l+1]/  other.ancho)==k))

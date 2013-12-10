@@ -14,16 +14,17 @@ class MatricesDSL
   end
   
   def to_s
-      output = "#{@operacion} de #{@tipo}"
+      output = "\n#{@operacion} de #{@tipo}"
       output << "\n#{'=' * output.size}\n\n"
       output << "Operacion: \n"
-      output << "#{@operand1.to_s} #{@tipo} "
       if (@operand2)
-	output << "#{@operand2.to_s}\n"
+          output << "\t#{@operand1.to_s} #{@operacion} #{@operand2.to_s}\n"
+      else
+          output << "\t#{@operacion} #{@operand1.to_s}\n"
       end
       output << "Resultado:\n"
       
-      output << "#{@resultado}"  
+      output << "\t#{@resultado}"  
       output
   end
   
@@ -55,4 +56,40 @@ class MatricesDSL
       end    
       operation
   end
+
+  def option(text)
+     if (text=='Densas' || text=='Dispersas' || text=='DensasDispersas' || text=='DispersasDensas')
+       @tipo=text
+     else
+       puts "Error en la sintaxis"
+     end
+    
+  end
+  
+  def operation
+  if @operacion == "Suma"
+     @resultado=@operand1 + @operand2
+  else
+      if @operacion == 'Resta'
+        @resultado=@operand1 - @operand2
+      else
+          if @operacion == 'Multiplicacion'
+            @resultado=@operand1 * @operand2
+          else
+            if @operacion == 'Opuesto'
+              @resultado=-@operand1
+            else
+              if @operacion == 'Max'
+                @resultado=@operand1.max
+              else
+                if @operacion == 'Min'
+                  @resultado=@operand1.min
+                end
+              end
+            end
+          end
+        end
+      end
+  end
+
 end  

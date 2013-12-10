@@ -85,7 +85,7 @@ class MatricesDis < Matrices
 				  end
 	  			end
 	  			0.upto(@matriz.length/2-1) do |x|
-				  l=x*2+1
+				  l=x*2
 				  j=@matriz[l+1]%other.ancho
 				  i=@matriz[l+1]/other.ancho
 				  resultado[i][j]=@matriz[l]+other.matriz[i][j]
@@ -152,7 +152,7 @@ class MatricesDis < Matrices
 				  end
 	  			end
 	  			0.upto(@matriz.length/2-1) do |x|
-				  l=x*2+1
+				  l=x*2
 				  j=@matriz[l+1]%other.ancho
 				  i=@matriz[l+1]/other.ancho
 				  resultado[i][j]=@matriz[l]-other.matriz[i][j]
@@ -205,9 +205,9 @@ class MatricesDis < Matrices
 					end
 					
 				
-					0.upto(@ancho) do |i|
-						0.upto(@ancho) do |j|
-							0.upto(@ancho) do |k|
+					0.upto(@ancho-1) do |i|
+						0.upto(@ancho-1) do |j|
+							0.upto(@ancho-1) do |k|
 								0.upto(@matriz.length/2-1) do |x|
 									l=x*2
 						      		if (((@matriz[l+1]%@ancho)==j) && ((@matriz[l+1]/@ancho)==k))
